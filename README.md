@@ -5,7 +5,7 @@ This is a tool that implements FUZZ and message dropping on BFT-SMaRt v1.2.
 This tool currently statically implements FUZZ inside the tool, and nodes defined as Byzantine nodes will randomly mutate messages sent by themselves.
 
 # How to drop message
-Write a file with multiple lines in the following format:
+Write a file with multiple lines in the following format (PROPOSE = 44781; WRITE = 44782; ACCEPT = 44783):
 
 ```
 <epoch> <number of round> <message sender> <message receiver>
