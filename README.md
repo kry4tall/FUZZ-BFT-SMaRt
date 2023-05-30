@@ -39,7 +39,9 @@ scenario-file-path=.../scenarios.txt
 
 # Reproduce the bug
 Fuzz the message send by node 0 and drop the Write message from node 2 and node 3 to node 1 in epoch 0. For the counter client, set "increment" to 1, "number of operations" to 10. We can find that:
+
 1.The cluster is unable to process all 10 increment requests correctly and the return value is discontinuous.
+
 2.The cluster is unable to select a leader within a limited time after request processing fails and ultimately stop.
 
 Example standard output of counter client:
