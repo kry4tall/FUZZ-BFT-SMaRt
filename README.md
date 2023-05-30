@@ -10,7 +10,7 @@ Write a file with multiple lines in the following format:
 ```
 <epoch> <number of round> <message sender> <message receiver>
 ```
-eg: Drop the Accept message from node 2 to node 1 and Accept message from node 3 to node 1 in epoch 0.
+eg: Drop the Write message from node 2 and node 3 to node 1 in epoch 0.
 ```
 0 44782 2 1
 0 44782 3 1
