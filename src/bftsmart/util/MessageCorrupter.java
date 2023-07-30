@@ -13,7 +13,7 @@ public class MessageCorrupter {
 
     static String corruptOutputFilePath;
 
-    static Random random = new Random();
+    static Random random = new Random(1234567);
 
     static{
         Properties properties = new Properties();
@@ -29,7 +29,7 @@ public class MessageCorrupter {
 
     public static int updateRandomNum()
     {
-        return random.nextInt(Integer.MAX_VALUE);
+        return random.nextInt();
     }
 
     public static boolean isByzantineNode(int nodeId)
