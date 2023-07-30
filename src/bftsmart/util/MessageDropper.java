@@ -13,7 +13,6 @@ public class MessageDropper {
 
     static String scenarioFilePath;
     static String dropOutputFilePath;
-    static String testFilePath;
 
     static int nodeNum;
 
@@ -35,24 +34,9 @@ public class MessageDropper {
         }
         scenarioFilePath = properties.getProperty("scenario-file-path"); //read from config
         dropOutputFilePath = properties.getProperty("drop-output-file");
-        testFilePath = properties.getProperty("test-file");
     }
 
     public static boolean isToDrop(ConsensusMessage msg, int receiver) {
-        if(receiver == 1) {
-            try {
-                File outputFile = new File(testFilePath);
-                FileWriter fw = new FileWriter(outputFile, true);
-                PrintWriter pw = new PrintWriter(fw);
-                pw.println("Receive message: " + msg);
-                pw.flush();
-                fw.flush();
-                pw.close();
-                fw.close();
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-        }
         ArrayList<String> lines = new ArrayList<>();
         try {
             File f = new File(scenarioFilePath);
@@ -76,7 +60,7 @@ public class MessageDropper {
         String current = msg.getEpoch() + " " + msg.getType() + " " + msg.getSender() + " " + receiver;
         for(String line : lines) {
             if(line.equals(current)) {
-                System.out.println("Drop message: " + msg);
+                System.out.println("Drop message: " + msg + ", to=" + receiver);
                 try {
                     File outputFile = new File(dropOutputFilePath);
                     FileWriter fw = new FileWriter(outputFile, true);

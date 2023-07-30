@@ -12,7 +12,6 @@ import java.util.Random;
 public class MessageCorrupter {
 
     static String corruptOutputFilePath;
-    static String testFilePath;
 
     static Random random = new Random();
 
@@ -26,7 +25,6 @@ public class MessageCorrupter {
             e.printStackTrace();
         }
         corruptOutputFilePath = properties.getProperty("corrupt-output-file");
-        testFilePath = properties.getProperty("test-file");
     }
 
     public static int updateRandomNum()
