@@ -2,7 +2,7 @@
 This is a tool that implements FUZZ and message dropping on BFT-SMaRt v1.2.
 
 # Baseline
-To run the counter demonstration by executing the following commands, from within the main directory across four different consoles (4 replicas, to tolerate 1 fault):
+To run the counter demonstration by executing the following commands. (4 replicas, tolerating 1 fault):
 
 ```
 ./runscripts/smartrun.sh bftsmart.demo.counter.CounterServer 0
