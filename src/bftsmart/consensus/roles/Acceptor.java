@@ -128,9 +128,20 @@ public final class Acceptor {
      * @param msg The message to be processed
      */
     public final void processMessage(ConsensusMessage msg) {
-
-        if(MessageDropper.isToDrop(msg, me))
+        if(MessageDropper.isToDrop(msg, me)) {
+            switch (msg.getType()){
+                case MessageFactory.PROPOSE:{
+                    MessageDropper.syncWrite("PROPOSE");
+                }break;
+                case MessageFactory.WRITE:{
+                    MessageDropper.syncWrite("WRITE");
+                }break;
+                case MessageFactory.ACCEPT:{
+                    MessageDropper.syncWrite("ACCEPT");
+                }
+            }
             return;
+        }
 
         Consensus consensus = executionManager.getConsensus(msg.getNumber());
 
@@ -139,16 +150,51 @@ public final class Acceptor {
 
         switch (msg.getType()){
             case MessageFactory.PROPOSE:{
-                    proposeReceived(epoch, msg);
+                proposeReceived(epoch, msg);
+                writeToLog(executionManager.consensusesToString());
             }break;
             case MessageFactory.WRITE:{
-                    writeReceived(epoch, msg.getSender(), msg.getValue());
+                writeReceived(epoch, msg.getSender(), msg.getValue());
+                writeToLog(executionManager.consensusesToString());
             }break;
             case MessageFactory.ACCEPT:{
-                    acceptReceived(epoch, msg);
+                acceptReceived(epoch, msg);
+                writeToLog(executionManager.consensusesToString());
             }
         }
         consensus.lock.unlock();
+
+        switch (msg.getType()){
+            case MessageFactory.PROPOSE:{
+                MessageDropper.syncWrite("PROPOSE");
+                try {
+                    MessageDropper.syncRead("PROPOSE");
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
+            }break;
+            case MessageFactory.WRITE:{
+                MessageDropper.syncWrite("WRITE");
+                try {
+                    MessageDropper.syncRead("WRITE");
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
+            }break;
+            case MessageFactory.ACCEPT:{
+                MessageDropper.syncWrite("ACCEPT");
+                try {
+                    MessageDropper.syncRead("ACCEPT");
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        }
+
+    }
+
+    public void writeToLog(String state){
+
     }
 
     /**
@@ -222,6 +268,7 @@ public final class Acceptor {
 
                     communication.send(this.controller.getCurrentViewOtherAcceptors(),
                             cm);
+                    MessageDropper.addWriteMsgCount();
 
                     logger.debug("WRITE sent for " + cid);
                 
@@ -240,10 +287,6 @@ public final class Acceptor {
 
 
                     ConsensusMessage cm = factory.createAccept(cid, epoch.getTimestamp(), epoch.propValueHash);
-                    if(MessageCorrupter.isByzantineNode(me))
-                    {
-                        cm = MessageCorrupter.corruptMessage(cm);
-                    }
 
                     communication.send(this.controller.getCurrentViewOtherAcceptors(),cm);
 
@@ -318,6 +361,7 @@ public final class Acceptor {
                 
                 int[] targets = this.controller.getCurrentViewOtherAcceptors();
                 communication.getServersConn().send(targets, cm, true);
+                MessageDropper.addAcceptMsgCount();
                 
                 //communication.send(this.reconfManager.getCurrentViewOtherAcceptors(),
                         //factory.createStrong(cid, epoch.getNumber(), value));

@@ -23,6 +23,10 @@ public class MessageDropper {
 
     static CountDownLatch acceptCDL;
 
+    static int writeMsgCount = 0;
+
+    static int acceptMsgCount = 0;
+
     static {
         Properties properties = new Properties();
         try {
@@ -34,6 +38,16 @@ public class MessageDropper {
         }
         scenarioFilePath = properties.getProperty("scenario-file-path"); //read from config
         dropOutputFilePath = properties.getProperty("drop-output-file");
+        nodeNum = Integer.parseInt(properties.getProperty("nodeNum"));
+        proposeCDL = new CountDownLatch(nodeNum);
+    }
+
+    public static synchronized void addWriteMsgCount(){
+        writeMsgCount += (nodeNum - 1);
+    }
+
+    public static synchronized void addAcceptMsgCount(){
+        acceptMsgCount += (nodeNum - 1);
     }
 
     public static boolean isToDrop(ConsensusMessage msg, int receiver) {
@@ -79,15 +93,19 @@ public class MessageDropper {
         return false;
     }
 
-    public static void syncWrite(String type){
+    public static synchronized void syncWrite(String type){
         switch (type) {
             case "PROPOSE":
                 proposeCDL.countDown();
+                if (proposeCDL.getCount() == 0)
+                    writeCDL = new CountDownLatch(writeMsgCount);
                 break;
-            case "ACK":
+            case "WRITE":
                 writeCDL.countDown();
+                if (writeCDL.getCount() == 0)
+                    acceptCDL = new CountDownLatch(acceptMsgCount);
                 break;
-            case "COMMIT":
+            case "ACCEPT":
                 acceptCDL.countDown();
                 break;
         }
@@ -97,23 +115,14 @@ public class MessageDropper {
         switch (type) {
             case "PROPOSE":
                 proposeCDL.await();
+
                 break;
-            case "ACK":
+            case "WRITE":
                 writeCDL.await();
                 break;
-            case "COMMIT":
+            case "ACCEPT":
                 acceptCDL.await();
                 break;
         }
-    }
-
-    public static void readNodeNumber() throws IOException {
-        Properties properties = new Properties();
-        InputStream in = ClassLoader.getSystemResourceAsStream("test.properties");
-        properties.load(in);
-        nodeNum = Integer.parseInt(properties.getProperty("nodeNum"));
-        proposeCDL = new CountDownLatch(nodeNum);
-        writeCDL = new CountDownLatch(nodeNum);
-        acceptCDL = new CountDownLatch(nodeNum);
     }
 }

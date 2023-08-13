@@ -37,10 +37,6 @@ public class MessageCorrupter {
         return nodeId == 0;
     }
 
-    public boolean isToCorrupt(ConsensusMessage msg, int receiver){
-        return true;
-    }
-
     public static ConsensusMessage corruptMessage(ConsensusMessage msg){
         int randomNum = updateRandomNum();
 

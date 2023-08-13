@@ -51,7 +51,25 @@ public class Consensus {
     private HashSet<TimestampValuePair> writeSet = new HashSet<TimestampValuePair>();
 
     public ReentrantLock lock = new ReentrantLock(); //this consensus lock (called by other classes)
-    
+
+    public String toStringTest() {
+        StringBuilder epochs2String = new StringBuilder("{");
+        for (Integer i : epochs.keySet())
+        {
+            epochs2String.append("#").append(epochs.get(i).toStringTest());
+        }
+        epochs2String.append("}");
+        return "Consensus{" +
+                ", decision=" + decision.toStringTest() +
+                ", epochs=" + epochs2String +
+                ", decided=" + decided +
+                ", decisionEpoch=" + decisionEpoch +
+                ", ets=" + ets +
+                ", quorumWrites=" + quorumWrites +
+                ", writeSet=" + writeSet.toString() +
+                '}';
+    }
+
     /**
      * Creates a new instance of Consensus
      * 

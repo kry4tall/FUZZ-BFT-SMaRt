@@ -18,6 +18,8 @@ package bftsmart.consensus;
 import bftsmart.tom.core.messages.TOMMessage;
 import org.slf4j.LoggerFactory;
 
+import java.util.Arrays;
+
 /**
  *
  * This class represents a Consensus Instance.
@@ -45,6 +47,17 @@ public class Decision {
      */
     public Decision(int cid) {
         this.cid = cid;
+    }
+
+    public String toStringTest() {
+        return "Decision{" +
+                "cid=" + cid +
+                ", decisionEpoch=" + decisionEpoch.toStringTest() +
+                ", regency=" + regency +
+                ", leader=" + leader +
+                ", value=" + Arrays.toString(value) +
+                ", batchSize=" + batchSize +
+                '}';
     }
 
     /**

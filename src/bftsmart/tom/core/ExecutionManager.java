@@ -503,4 +503,14 @@ public final class ExecutionManager {
     public String toString() {
         return stoppedMsgs.toString();
     }
+
+    public String consensusesToString(){
+        StringBuilder result = new StringBuilder("{");
+        for (Integer i : consensuses.keySet())
+        {
+            result.append("#").append(consensuses.get(i).toStringTest());
+        }
+        result.append("}");
+        return result.toString();
+    }
 }

@@ -373,6 +373,15 @@ public class Epoch implements Serializable {
         return "\n\t\tCID=" + consensus.getId() + " \n\t\tTS=" + getTimestamp() + " " + "\n\t\tPropose=[" + (propValueHash != null ? str(propValueHash) : null) + "] " + buffWrite + " " + buffAccept;
     }
 
+    public String toStringTest() {
+        return toString() + "#timestamp:" + timestamp +
+                "#me:" + me +
+                "#alreadyRemoved:" + alreadyRemoved +
+                "#propValue:" + Arrays.toString(propValue) +
+                "#proof:" + proof.toString() +
+                "#lastView:" + lastView.toString();
+    }
+
     private String str(byte[] obj) {
         if(obj == null) {
             return "null";
