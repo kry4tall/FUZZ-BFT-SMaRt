@@ -52,7 +52,7 @@ public class Decision {
     public String toStringTest() {
         return "Decision{" +
                 "cid=" + cid +
-                ", decisionEpoch=" + decisionEpoch.toStringTest() +
+                ", decisionEpoch=" + (decisionEpoch == null ? "null" : decisionEpoch.toStringTest()) +
                 ", regency=" + regency +
                 ", leader=" + leader +
                 ", value=" + Arrays.toString(value) +

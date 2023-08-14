@@ -20,6 +20,8 @@ import bftsmart.consensus.messages.ConsensusMessage;
 import bftsmart.consensus.messages.MessageFactory;
 import bftsmart.reconfiguration.ServerViewController;
 import bftsmart.util.MessageCorrupter;
+import bftsmart.util.MessageDropper;
+import java.util.concurrent.CountDownLatch;
 
 /**
  * This class represents the proposer role in the consensus protocol.
@@ -52,6 +54,8 @@ public class Proposer {
      * @param value Value to be proposed
      */
     public void startConsensus(int cid, byte[] value) {
+        MessageDropper.initProposeCDL();
+        System.out.println("MessageDropper.initProposeCDL()");
         //******* EDUARDO BEGIN **************//
         ConsensusMessage cm = factory.createPropose(cid, 0, value);
 

@@ -504,13 +504,15 @@ public final class ExecutionManager {
         return stoppedMsgs.toString();
     }
 
-    public String consensusesToString(){
+    public synchronized String consensusesToString(){
+        consensusesLock.lock();
         StringBuilder result = new StringBuilder("{");
         for (Integer i : consensuses.keySet())
         {
             result.append("#").append(consensuses.get(i).toStringTest());
         }
         result.append("}");
+        consensusesLock.unlock();
         return result.toString();
     }
 }

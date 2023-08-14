@@ -378,8 +378,8 @@ public class Epoch implements Serializable {
                 "#me:" + me +
                 "#alreadyRemoved:" + alreadyRemoved +
                 "#propValue:" + Arrays.toString(propValue) +
-                "#proof:" + proof.toString() +
-                "#lastView:" + lastView.toString();
+                "#proof:" + (proof == null ? "null" : proof.toString()) +
+                "#lastView:" + (lastView == null ? "null" : lastView.toString());
     }
 
     private String str(byte[] obj) {

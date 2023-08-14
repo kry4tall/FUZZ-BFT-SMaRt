@@ -14,6 +14,8 @@ public class MessageDropper {
     static String scenarioFilePath;
     static String dropOutputFilePath;
 
+    static String stateFilePath;
+
     static int nodeNum;
 
 
@@ -38,7 +40,11 @@ public class MessageDropper {
         }
         scenarioFilePath = properties.getProperty("scenario-file-path"); //read from config
         dropOutputFilePath = properties.getProperty("drop-output-file");
+        stateFilePath = properties.getProperty("state-file");
         nodeNum = Integer.parseInt(properties.getProperty("nodeNum"));
+    }
+
+    public static void initProposeCDL(){
         proposeCDL = new CountDownLatch(nodeNum);
     }
 
@@ -48,6 +54,21 @@ public class MessageDropper {
 
     public static synchronized void addAcceptMsgCount(){
         acceptMsgCount += (nodeNum - 1);
+    }
+
+    public static synchronized void writeToLog(String state, Integer processId){
+        try {
+            File outputFile = new File(stateFilePath);
+            FileWriter fw = new FileWriter(outputFile, true);
+            PrintWriter pw = new PrintWriter(fw);
+            pw.println(String.format("Node%d's state: %s", processId, state));
+            pw.flush();
+            fw.flush();
+            pw.close();
+            fw.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public static boolean isToDrop(ConsensusMessage msg, int receiver) {
@@ -94,28 +115,27 @@ public class MessageDropper {
     }
 
     public static synchronized void syncWrite(String type){
-        switch (type) {
-            case "PROPOSE":
-                proposeCDL.countDown();
-                if (proposeCDL.getCount() == 0)
-                    writeCDL = new CountDownLatch(writeMsgCount);
-                break;
-            case "WRITE":
-                writeCDL.countDown();
-                if (writeCDL.getCount() == 0)
-                    acceptCDL = new CountDownLatch(acceptMsgCount);
-                break;
-            case "ACCEPT":
-                acceptCDL.countDown();
-                break;
-        }
+//        switch (type) {
+//            case "PROPOSE":
+//                proposeCDL.countDown();
+//                if (proposeCDL.getCount() == 0)
+//                    writeCDL = new CountDownLatch(writeMsgCount);
+//                break;
+//            case "WRITE":
+//                writeCDL.countDown();
+//                if (writeCDL.getCount() == 0)
+//                    acceptCDL = new CountDownLatch(acceptMsgCount);
+//                break;
+//            case "ACCEPT":
+//                acceptCDL.countDown();
+//                break;
+//        }
     }
 
     public static void syncRead(String type) throws InterruptedException {
         switch (type) {
             case "PROPOSE":
                 proposeCDL.await();
-
                 break;
             case "WRITE":
                 writeCDL.await();

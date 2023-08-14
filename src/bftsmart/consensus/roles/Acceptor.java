@@ -16,6 +16,9 @@ limitations under the License.
 package bftsmart.consensus.roles;
 
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.PrintWriter;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
@@ -151,15 +154,15 @@ public final class Acceptor {
         switch (msg.getType()){
             case MessageFactory.PROPOSE:{
                 proposeReceived(epoch, msg);
-                writeToLog(executionManager.consensusesToString());
+                MessageDropper.writeToLog(executionManager.consensusesToString(), me);
             }break;
             case MessageFactory.WRITE:{
                 writeReceived(epoch, msg.getSender(), msg.getValue());
-                writeToLog(executionManager.consensusesToString());
+                MessageDropper.writeToLog(executionManager.consensusesToString(), me);
             }break;
             case MessageFactory.ACCEPT:{
                 acceptReceived(epoch, msg);
-                writeToLog(executionManager.consensusesToString());
+                MessageDropper.writeToLog(executionManager.consensusesToString(), me);
             }
         }
         consensus.lock.unlock();
@@ -167,33 +170,14 @@ public final class Acceptor {
         switch (msg.getType()){
             case MessageFactory.PROPOSE:{
                 MessageDropper.syncWrite("PROPOSE");
-                try {
-                    MessageDropper.syncRead("PROPOSE");
-                } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
-                }
             }break;
             case MessageFactory.WRITE:{
                 MessageDropper.syncWrite("WRITE");
-                try {
-                    MessageDropper.syncRead("WRITE");
-                } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
-                }
             }break;
             case MessageFactory.ACCEPT:{
                 MessageDropper.syncWrite("ACCEPT");
-                try {
-                    MessageDropper.syncRead("ACCEPT");
-                } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
-                }
             }
         }
-
-    }
-
-    public void writeToLog(String state){
 
     }
 

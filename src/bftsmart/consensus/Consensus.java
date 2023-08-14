@@ -53,12 +53,14 @@ public class Consensus {
     public ReentrantLock lock = new ReentrantLock(); //this consensus lock (called by other classes)
 
     public String toStringTest() {
-        StringBuilder epochs2String = new StringBuilder("{");
-        for (Integer i : epochs.keySet())
-        {
-            epochs2String.append("#").append(epochs.get(i).toStringTest());
+        StringBuilder epochs2String = new StringBuilder("[");
+        if (epochs != null && epochs.size() > 0){
+            for (Integer i : epochs.keySet())
+            {
+                epochs2String.append("#").append(epochs.get(i).toStringTest());
+            }
         }
-        epochs2String.append("}");
+        epochs2String.append("]");
         return "Consensus{" +
                 ", decision=" + decision.toStringTest() +
                 ", epochs=" + epochs2String +
@@ -66,7 +68,7 @@ public class Consensus {
                 ", decisionEpoch=" + decisionEpoch +
                 ", ets=" + ets +
                 ", quorumWrites=" + quorumWrites +
-                ", writeSet=" + writeSet.toString() +
+                ", writeSet=" + (writeSet == null ? "null" : writeSet.toString()) +
                 '}';
     }
 
