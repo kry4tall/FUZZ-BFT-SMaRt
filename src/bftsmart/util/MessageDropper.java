@@ -3,6 +3,8 @@ package bftsmart.util;
 import bftsmart.consensus.messages.ConsensusMessage;
 
 import java.io.*;
+import java.nio.channels.FileChannel;
+import java.nio.channels.FileLock;
 import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.Objects;
@@ -35,12 +37,82 @@ public class MessageDropper {
 
     public static void addProposeMsgCount(){
         //propose file +1
+
     }
 
     public static void addWriteMsgCount(){
     }
 
     public static void addAcceptMsgCount(){
+    }
+
+    public static int concurrentReadFile(String fileName) throws IOException {
+        RandomAccessFile randomAccessFile = null;
+        FileChannel channel = null;
+        String result = null;
+        try {
+            randomAccessFile = new RandomAccessFile(fileName, "rw");
+            channel = randomAccessFile.getChannel();
+            FileLock lock = null;
+            while (true) {
+                lock = channel.tryLock();
+                if (null == lock) {
+                    System.out.println("Read Process : get lock failed");
+                    Thread.sleep(100);
+                } else {
+                    break;
+                }
+            }
+            byte[] target = new byte[8];
+            int len = randomAccessFile.read(target);
+            result = new String(target,0, len).trim();
+            System.out.println("Read RandomAccessFile : get " + result);
+            lock.release();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (null != randomAccessFile) {
+                randomAccessFile.close();
+            }
+            if (null != channel) {
+                channel.close();
+            }
+        }
+        return result == null ? 0 : Integer.parseInt(result);
+    }
+
+    public static void concurrentWriteFile(String fileName, String content) throws IOException {
+        RandomAccessFile randomAccessFile = null;
+        FileChannel channel = null;
+        try {
+            randomAccessFile = new RandomAccessFile(fileName, "rw");
+            channel = randomAccessFile.getChannel();
+            FileLock lock = null;
+            while (true) {
+                lock = channel.tryLock();
+                if (null == lock) {
+                    System.out.println("Read Process : get lock failed");
+                    Thread.sleep(100);
+                } else {
+                    break;
+                }
+            }
+            System.out.println("Write RandomAccessFile : get lock");
+            randomAccessFile.seek(0);
+            randomAccessFile.setLength(0);
+            randomAccessFile.writeBytes(content);
+            lock.release();
+            System.out.println("Write RandomAccessFile : release lock");
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (null != randomAccessFile) {
+                randomAccessFile.close();
+            }
+            if (null != channel) {
+                channel.close();
+            }
+        }
     }
 
     public static void writeToLog(String state, Integer processId){
