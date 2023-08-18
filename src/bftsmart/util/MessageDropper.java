@@ -8,26 +8,15 @@ import java.util.ArrayList;
 import java.util.Objects;
 import java.util.Properties;
 import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.locks.ReentrantLock;
 
 public class MessageDropper {
 
     static String scenarioFilePath;
     static String dropOutputFilePath;
-
     static String stateFilePath;
 
     static int nodeNum;
-
-
-    static CountDownLatch proposeCDL;
-
-    static CountDownLatch writeCDL;
-
-    static CountDownLatch acceptCDL;
-
-    static int writeMsgCount = 0;
-
-    static int acceptMsgCount = 0;
 
     static {
         Properties properties = new Properties();
@@ -44,19 +33,17 @@ public class MessageDropper {
         nodeNum = Integer.parseInt(properties.getProperty("nodeNum"));
     }
 
-    public static void initProposeCDL(){
-        proposeCDL = new CountDownLatch(nodeNum);
+    public static void addProposeMsgCount(){
+        //propose file +1
     }
 
-    public static synchronized void addWriteMsgCount(){
-        writeMsgCount += (nodeNum - 1);
+    public static void addWriteMsgCount(){
     }
 
-    public static synchronized void addAcceptMsgCount(){
-        acceptMsgCount += (nodeNum - 1);
+    public static void addAcceptMsgCount(){
     }
 
-    public static synchronized void writeToLog(String state, Integer processId){
+    public static void writeToLog(String state, Integer processId){
         try {
             File outputFile = new File(stateFilePath);
             FileWriter fw = new FileWriter(outputFile, true);
@@ -114,34 +101,26 @@ public class MessageDropper {
         return false;
     }
 
-    public static synchronized void syncWrite(String type){
-//        switch (type) {
-//            case "PROPOSE":
-//                proposeCDL.countDown();
-//                if (proposeCDL.getCount() == 0)
-//                    writeCDL = new CountDownLatch(writeMsgCount);
-//                break;
-//            case "WRITE":
-//                writeCDL.countDown();
-//                if (writeCDL.getCount() == 0)
-//                    acceptCDL = new CountDownLatch(acceptMsgCount);
-//                break;
-//            case "ACCEPT":
-//                acceptCDL.countDown();
-//                break;
-//        }
+    public static void syncWrite(String type){
+        switch (type) {
+            case "PROPOSE":
+                //propose file count -1
+                break;
+            case "WRITE":
+                break;
+            case "ACCEPT":
+                break;
+        }
     }
 
     public static void syncRead(String type) throws InterruptedException {
         switch (type) {
             case "PROPOSE":
-                proposeCDL.await();
+                //propose file count = 0
                 break;
             case "WRITE":
-                writeCDL.await();
                 break;
             case "ACCEPT":
-                acceptCDL.await();
                 break;
         }
     }

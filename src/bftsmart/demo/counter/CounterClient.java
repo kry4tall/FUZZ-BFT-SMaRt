@@ -58,6 +58,8 @@ public class CounterClient {
                 if(reply != null) {
                     int newValue = new DataInputStream(new ByteArrayInputStream(reply)).readInt();
                     System.out.println(", returned value: " + newValue);
+                    if (newValue % 10 == 0)
+                        System.exit(0);
                 } else {
                     System.out.println(", ERROR! Exiting.");
                     break;

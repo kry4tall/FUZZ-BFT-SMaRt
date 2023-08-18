@@ -54,8 +54,6 @@ public class Proposer {
      * @param value Value to be proposed
      */
     public void startConsensus(int cid, byte[] value) {
-        MessageDropper.initProposeCDL();
-        System.out.println("MessageDropper.initProposeCDL()");
         //******* EDUARDO BEGIN **************//
         ConsensusMessage cm = factory.createPropose(cid, 0, value);
 

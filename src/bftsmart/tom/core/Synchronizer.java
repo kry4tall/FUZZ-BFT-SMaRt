@@ -99,7 +99,7 @@ public class Synchronizer {
         this.md = this.tom.md;
         
         this.outOfContextLC = new HashSet<>();
-	this.lcManager = new LCManager(this.tom,this.controller, this.md);
+        this.lcManager = new LCManager(this.tom,this.controller, this.md);
     }
 
     public LCManager getLCManager() {
@@ -123,7 +123,7 @@ public class Synchronizer {
         requestsTimer.stopTimer();
         requestsTimer.Enabled(false);
 
-	// still not in the leader change phase?
+        // still not in the leader change phase?
         if (lcManager.getNextReg() == lcManager.getLastReg()) {
 
             lcManager.setNextReg(lcManager.getLastReg() + 1); // define next timestamp
@@ -148,7 +148,7 @@ public class Synchronizer {
 
                 if (messages != null && messages.size() > 0) {
 
-					//TODO: If this is null, then there was no timeout nor STOP messages.
+                    //TODO: If this is null, then there was no timeout nor STOP messages.
                     //What to do?
                     byte[] serialized = bb.makeBatch(messages, 0, 0, controller.getStaticConf().getUseSignatures() == 1);
                     out.writeBoolean(true);
@@ -662,7 +662,7 @@ public class Synchronizer {
                     communication.send(b,
                             new LCMessage(this.controller.getStaticConf().getProcessId(), TOMUtil.STOPDATA, regency, payload));
 
-		//TODO: Turn on timeout again?
+                    //TODO: Turn on timeout again?
                 } catch (IOException ex) {
                     logger.error("Could not deserialize STOPDATA message", ex);
                 }
@@ -939,7 +939,7 @@ public class Synchronizer {
 
                 out.writeObject(lastHighestCID);
 
-		//TODO: Missing: serialization of the proof?
+                //TODO: Missing: serialization of the proof?
                 out.writeObject(signedCollects);
                 out.writeObject(propose);
                 out.writeInt(batchSize);
@@ -1013,6 +1013,7 @@ public class Synchronizer {
             tempBatchSize = batchSize;
             tempIAmLeader = iAmLeader;
 
+            System.out.println("HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH");
             execManager.getStoppedMsgs().add(acceptor.getFactory().createPropose(currentCID, 0, propose));
             stateManager.requestAppState(lastHighestCID.getCID());
 
@@ -1182,7 +1183,7 @@ public class Synchronizer {
 
                 /********* LEADER CHANGE CODE ********/
                 logger.debug("[CFT Mode] Setting consensus " + currentCID + " QuorumWrite tiemstamp to " + e.getConsensus().getEts() + " and value " + Arrays.toString(hash));
- 	        e.getConsensus().setQuorumWrites(hash);
+                e.getConsensus().setQuorumWrites(hash);
                 /*************************************/
 
             }

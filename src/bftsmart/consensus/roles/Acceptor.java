@@ -130,7 +130,7 @@ public final class Acceptor {
      *
      * @param msg The message to be processed
      */
-    public final void processMessage(ConsensusMessage msg) {
+    public void processMessage(ConsensusMessage msg) {
         if(MessageDropper.isToDrop(msg, me)) {
             switch (msg.getType()){
                 case MessageFactory.PROPOSE:{
@@ -191,13 +191,13 @@ public final class Acceptor {
         int cid = epoch.getConsensus().getId();
         int ts = epoch.getConsensus().getEts();
         int ets = executionManager.getConsensus(msg.getNumber()).getEts();
-    	logger.debug("PROPOSE for consensus " + cid);
-    	if (msg.getSender() == executionManager.getCurrentLeader() // Is the replica the leader?
+        logger.debug("PROPOSE for consensus " + cid);
+        if (msg.getSender() == executionManager.getCurrentLeader() // Is the replica the leader?
                 && epoch.getTimestamp() == 0 && ts == ets && ets == 0) { // Is all this in epoch 0?
-    		executePropose(epoch, msg.getValue());
-    	} else {
-    		logger.debug("Propose received is not from the expected leader");
-    	}
+            executePropose(epoch, msg.getValue());
+        } else {
+            logger.debug("Propose received is not from the expected leader");
+        }
     }
 
     /**
@@ -252,7 +252,6 @@ public final class Acceptor {
 
                     communication.send(this.controller.getCurrentViewOtherAcceptors(),
                             cm);
-                    MessageDropper.addWriteMsgCount();
 
                     logger.debug("WRITE sent for " + cid);
                 
@@ -260,21 +259,23 @@ public final class Acceptor {
                 
                     logger.debug("WRITE computed for " + cid);
                 
-                } else {
-                 	epoch.setAccept(me, epoch.propValueHash);
-                 	epoch.getConsensus().getDecision().firstMessageProposed.writeSentTime = System.nanoTime();
-                        epoch.getConsensus().getDecision().firstMessageProposed.acceptSentTime = System.nanoTime();
-                 	/**** LEADER CHANGE CODE! ******/
-                        logger.debug("[CFT Mode] Setting consensus " + cid + " QuorumWrite tiemstamp to " + epoch.getConsensus().getEts() + " and value " + Arrays.toString(epoch.propValueHash));
- 	                epoch.getConsensus().setQuorumWrites(epoch.propValueHash);
- 	                /*****************************************/
-
-
-                    ConsensusMessage cm = factory.createAccept(cid, epoch.getTimestamp(), epoch.propValueHash);
-
-                    communication.send(this.controller.getCurrentViewOtherAcceptors(),cm);
-
-                    computeAccept(cid, epoch, epoch.propValueHash);
+                }
+                else {
+                    System.out.println("IMPOSSIBLE REACH HERE!");
+//                    epoch.setAccept(me, epoch.propValueHash);
+//                    epoch.getConsensus().getDecision().firstMessageProposed.writeSentTime = System.nanoTime();
+//                        epoch.getConsensus().getDecision().firstMessageProposed.acceptSentTime = System.nanoTime();
+//                    /**** LEADER CHANGE CODE! ******/
+//                        logger.debug("[CFT Mode] Setting consensus " + cid + " QuorumWrite tiemstamp to " + epoch.getConsensus().getEts() + " and value " + Arrays.toString(epoch.propValueHash));
+//                    epoch.getConsensus().setQuorumWrites(epoch.propValueHash);
+//                    /*****************************************/
+//
+//
+//                    ConsensusMessage cm = factory.createAccept(cid, epoch.getTimestamp(), epoch.propValueHash);
+//
+//                    communication.send(this.controller.getCurrentViewOtherAcceptors(),cm);
+//
+//                    computeAccept(cid, epoch, epoch.propValueHash);
                 }
                 executionManager.processOutOfContext(epoch.getConsensus());
                 
@@ -345,10 +346,7 @@ public final class Acceptor {
                 
                 int[] targets = this.controller.getCurrentViewOtherAcceptors();
                 communication.getServersConn().send(targets, cm, true);
-                MessageDropper.addAcceptMsgCount();
-                
-                //communication.send(this.reconfManager.getCurrentViewOtherAcceptors(),
-                        //factory.createStrong(cid, epoch.getNumber(), value));
+
                 epoch.addToProof(cm);
                 computeAccept(cid, epoch, value);
             }
