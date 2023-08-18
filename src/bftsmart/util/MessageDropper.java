@@ -35,15 +35,15 @@ public class MessageDropper {
         nodeNum = Integer.parseInt(properties.getProperty("nodeNum"));
     }
 
-    public static void addProposeMsgCount(){
+    public static void addProposeMsgCount() {
         //propose file +1
 
     }
 
-    public static void addWriteMsgCount(){
+    public static void addWriteMsgCount() {
     }
 
-    public static void addAcceptMsgCount(){
+    public static void addAcceptMsgCount() {
     }
 
     public static int concurrentReadFile(String fileName) throws IOException {
@@ -65,7 +65,7 @@ public class MessageDropper {
             }
             byte[] target = new byte[8];
             int len = randomAccessFile.read(target);
-            result = new String(target,0, len).trim();
+            result = new String(target, 0, len).trim();
             System.out.println("Read RandomAccessFile : get " + result);
             lock.release();
         } catch (Exception e) {
@@ -115,7 +115,7 @@ public class MessageDropper {
         }
     }
 
-    public static void writeToLog(String state, Integer processId){
+    public static void writeToLog(String state, Integer processId) {
         try {
             File outputFile = new File(stateFilePath);
             FileWriter fw = new FileWriter(outputFile, true);
@@ -137,14 +137,13 @@ public class MessageDropper {
             InputStream in = Files.newInputStream(f.toPath());
             BufferedReader br = new BufferedReader(new InputStreamReader(in));
             String line;
-            while(true)
-            {
+            while (true) {
                 line = br.readLine();
-                if(line != null) {
+                if (line != null) {
                     lines.add(line);
-                }
-                else
+                } else {
                     break;
+                }
             }
             br.close();
             in.close();
@@ -152,8 +151,8 @@ public class MessageDropper {
             e.printStackTrace();
         }
         String current = msg.getEpoch() + " " + msg.getType() + " " + msg.getSender() + " " + receiver;
-        for(String line : lines) {
-            if(line.equals(current)) {
+        for (String line : lines) {
+            if (line.equals(current)) {
                 System.out.println("Drop message: " + msg + ", to=" + receiver);
                 try {
                     File outputFile = new File(dropOutputFilePath);
@@ -173,7 +172,7 @@ public class MessageDropper {
         return false;
     }
 
-    public static void syncWrite(String type){
+    public static void syncWrite(String type) {
         switch (type) {
             case "PROPOSE":
                 //propose file count -1
