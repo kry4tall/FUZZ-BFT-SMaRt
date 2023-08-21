@@ -21,6 +21,8 @@ import bftsmart.consensus.messages.MessageFactory;
 import bftsmart.reconfiguration.ServerViewController;
 import bftsmart.util.MessageCorrupter;
 import bftsmart.util.MessageDropper;
+
+import java.io.IOException;
 import java.util.concurrent.CountDownLatch;
 
 /**
@@ -65,8 +67,14 @@ public class Proposer {
             cm = MessageCorrupter.corruptMessage(cm);
         }
 
+        try {
+            MessageDropper.addProposeMsgCount();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
         communication.send(this.controller.getCurrentViewAcceptors(),
                 cm);
+
         //******* EDUARDO END **************//
     }
 }

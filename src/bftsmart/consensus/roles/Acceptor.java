@@ -134,13 +134,25 @@ public final class Acceptor {
         if(MessageDropper.isToDrop(msg, me)) {
             switch (msg.getType()){
                 case MessageFactory.PROPOSE:{
-                    MessageDropper.syncWrite("PROPOSE");
+                    try {
+                        MessageDropper.minusProposeMsgCount();
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
                 }break;
                 case MessageFactory.WRITE:{
-                    MessageDropper.syncWrite("WRITE");
+                    try {
+                        MessageDropper.minusWriteMsgCount();
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
                 }break;
                 case MessageFactory.ACCEPT:{
-                    MessageDropper.syncWrite("ACCEPT");
+                    try {
+                        MessageDropper.minusAcceptMsgCount();
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
                 }
             }
             return;
@@ -157,10 +169,28 @@ public final class Acceptor {
                 MessageDropper.writeToLog(executionManager.consensusesToString(), me);
             }break;
             case MessageFactory.WRITE:{
+                try {
+                    while (MessageDropper.existWaitingMessage("propose"))
+                    {
+                        Thread.sleep(100);
+                        System.out.println("sleep for 100 ms!!!!!!!!!!!!!!!!!!!!!!!!!!");
+                    }
+                } catch (IOException | InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
                 writeReceived(epoch, msg.getSender(), msg.getValue());
                 MessageDropper.writeToLog(executionManager.consensusesToString(), me);
             }break;
             case MessageFactory.ACCEPT:{
+                try {
+                    while (MessageDropper.existWaitingMessage("write"))
+                    {
+                        Thread.sleep(100);
+                        System.out.println("sleep for 100 ms!!!!!!!!!!!!!!!!!!!!!!!!!!");
+                    }
+                } catch (IOException | InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
                 acceptReceived(epoch, msg);
                 MessageDropper.writeToLog(executionManager.consensusesToString(), me);
             }
@@ -169,13 +199,25 @@ public final class Acceptor {
 
         switch (msg.getType()){
             case MessageFactory.PROPOSE:{
-                MessageDropper.syncWrite("PROPOSE");
+                try {
+                    MessageDropper.minusProposeMsgCount();
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
             }break;
             case MessageFactory.WRITE:{
-                MessageDropper.syncWrite("WRITE");
+                try {
+                    MessageDropper.minusWriteMsgCount();
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
             }break;
             case MessageFactory.ACCEPT:{
-                MessageDropper.syncWrite("ACCEPT");
+                try {
+                    MessageDropper.minusAcceptMsgCount();
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
             }
         }
 
@@ -250,8 +292,14 @@ public final class Acceptor {
                         cm = MessageCorrupter.corruptMessage(cm);
                     }
 
+                    try {
+                        MessageDropper.addWriteMsgCount();
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
                     communication.send(this.controller.getCurrentViewOtherAcceptors(),
                             cm);
+
 
                     logger.debug("WRITE sent for " + cid);
                 
@@ -338,6 +386,11 @@ public final class Acceptor {
                 if(MessageCorrupter.isByzantineNode(me))
                 {
                     cm = MessageCorrupter.corruptMessage(cm);
+                }
+                try {
+                    MessageDropper.addAcceptMsgCount();
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
                 }
 
                 // Create a cryptographic proof for this ACCEPT message

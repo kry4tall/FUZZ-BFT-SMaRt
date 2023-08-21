@@ -20,6 +20,8 @@ public class MessageDropper {
 
     static int nodeNum;
 
+    static String path = "Z:\\hk\\bft-testing\\FUZZ-BFT-SMaRt\\src\\resource\\";
+
     static {
         Properties properties = new Properties();
         try {
@@ -35,15 +37,41 @@ public class MessageDropper {
         nodeNum = Integer.parseInt(properties.getProperty("nodeNum"));
     }
 
-    public static void addProposeMsgCount() {
-        //propose file +1
-
+    public static void addProposeMsgCount() throws IOException {
+        //propose file +4
+        concurrentWriteFile("Z:\\hk\\bft-testing\\FUZZ-BFT-SMaRt\\src\\resource\\propose",String.valueOf(nodeNum));
     }
 
-    public static void addWriteMsgCount() {
+    public static void minusProposeMsgCount() throws IOException {
+        //propose file +4
+        int currentResult = concurrentReadFile("Z:\\hk\\bft-testing\\FUZZ-BFT-SMaRt\\src\\resource\\propose");
+        concurrentWriteFile("Z:\\hk\\bft-testing\\FUZZ-BFT-SMaRt\\src\\resource\\propose",String.valueOf(currentResult - 1));
     }
 
-    public static void addAcceptMsgCount() {
+    public static void addWriteMsgCount() throws IOException {
+        int currentResult = concurrentReadFile("Z:\\hk\\bft-testing\\FUZZ-BFT-SMaRt\\src\\resource\\write");
+        concurrentWriteFile("Z:\\hk\\bft-testing\\FUZZ-BFT-SMaRt\\src\\resource\\write",String.valueOf(currentResult + nodeNum - 1));
+    }
+
+    public static void minusWriteMsgCount() throws IOException {
+        //propose file +4
+        int currentResult = concurrentReadFile("Z:\\hk\\bft-testing\\FUZZ-BFT-SMaRt\\src\\resource\\write");
+        concurrentWriteFile("Z:\\hk\\bft-testing\\FUZZ-BFT-SMaRt\\src\\resource\\write",String.valueOf(currentResult - 1));
+    }
+
+    public static void addAcceptMsgCount() throws IOException {
+        int currentResult = concurrentReadFile("Z:\\hk\\bft-testing\\FUZZ-BFT-SMaRt\\src\\resource\\accept");
+        concurrentWriteFile("Z:\\hk\\bft-testing\\FUZZ-BFT-SMaRt\\src\\resource\\accept",String.valueOf(currentResult + nodeNum - 1));
+    }
+
+    public static void minusAcceptMsgCount() throws IOException {
+        //propose file +4
+        int currentResult = concurrentReadFile("Z:\\hk\\bft-testing\\FUZZ-BFT-SMaRt\\src\\resource\\accept");
+        concurrentWriteFile("Z:\\hk\\bft-testing\\FUZZ-BFT-SMaRt\\src\\resource\\accept",String.valueOf(currentResult - 1));
+    }
+
+    public static boolean existWaitingMessage(String type) throws IOException {
+        return concurrentReadFile(path + type) != 0;
     }
 
     public static int concurrentReadFile(String fileName) throws IOException {
@@ -170,29 +198,5 @@ public class MessageDropper {
             }
         }
         return false;
-    }
-
-    public static void syncWrite(String type) {
-        switch (type) {
-            case "PROPOSE":
-                //propose file count -1
-                break;
-            case "WRITE":
-                break;
-            case "ACCEPT":
-                break;
-        }
-    }
-
-    public static void syncRead(String type) throws InterruptedException {
-        switch (type) {
-            case "PROPOSE":
-                //propose file count = 0
-                break;
-            case "WRITE":
-                break;
-            case "ACCEPT":
-                break;
-        }
     }
 }
