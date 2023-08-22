@@ -34,8 +34,8 @@ public class MessageCorrupter {
 
     public static boolean isByzantineNode(int nodeId)
     {
-        //return nodeId == 0;
-        return false;
+        return nodeId == 0;
+        //return false;
     }
 
     public static ConsensusMessage corruptMessage(ConsensusMessage msg){

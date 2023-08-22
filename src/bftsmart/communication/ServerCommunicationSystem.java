@@ -15,6 +15,7 @@ limitations under the License.
 */
 package bftsmart.communication;
 
+import java.io.IOException;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.TimeUnit;
 
@@ -22,12 +23,14 @@ import bftsmart.communication.client.CommunicationSystemServerSide;
 import bftsmart.communication.client.CommunicationSystemServerSideFactory;
 import bftsmart.communication.client.RequestReceiver;
 import bftsmart.communication.server.ServersCommunicationLayer;
+import bftsmart.consensus.messages.ConsensusMessage;
 import bftsmart.consensus.roles.Acceptor;
 import bftsmart.reconfiguration.ServerViewController;
 import bftsmart.tom.ServiceReplica;
 import bftsmart.tom.core.TOMLayer;
 import bftsmart.tom.core.messages.TOMMessage;
 
+import bftsmart.util.MessageDropper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -144,6 +147,16 @@ public class ServerCommunicationSystem extends Thread {
      * @param sm the message to be sent
      */
     public void send(int[] targets, SystemMessage sm) {
+        if (sm instanceof ConsensusMessage) {
+            if (((ConsensusMessage) sm).getPaxosVerboseType().equals("WRITE")) {
+                try {
+                    MessageDropper.addWriteMsgCount();
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        }
+
         if (sm instanceof TOMMessage) {
             clientsConn.send(targets, (TOMMessage) sm, false);
         } else {

@@ -172,8 +172,8 @@ public final class Acceptor {
                 try {
                     while (MessageDropper.existWaitingMessage("propose"))
                     {
-                        Thread.sleep(100);
-                        System.out.println("sleep for 100 ms!!!!!!!!!!!!!!!!!!!!!!!!!!");
+                        Thread.sleep(1000);
+                        System.out.println("sleep for one second  ~~~~~~~~~~~~~~~~~~~~~~~~~~~");
                     }
                 } catch (IOException | InterruptedException e) {
                     throw new RuntimeException(e);
@@ -185,8 +185,8 @@ public final class Acceptor {
                 try {
                     while (MessageDropper.existWaitingMessage("write"))
                     {
-                        Thread.sleep(100);
-                        System.out.println("sleep for 100 ms!!!!!!!!!!!!!!!!!!!!!!!!!!");
+                        Thread.sleep(1000);
+                        System.out.println("sleep for one second  ~~~~~~~~~~~~~~~~~~~~~~~~~~~");
                     }
                 } catch (IOException | InterruptedException e) {
                     throw new RuntimeException(e);
@@ -292,11 +292,6 @@ public final class Acceptor {
                         cm = MessageCorrupter.corruptMessage(cm);
                     }
 
-                    try {
-                        MessageDropper.addWriteMsgCount();
-                    } catch (IOException e) {
-                        throw new RuntimeException(e);
-                    }
                     communication.send(this.controller.getCurrentViewOtherAcceptors(),
                             cm);
 

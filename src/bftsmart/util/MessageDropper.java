@@ -9,8 +9,6 @@ import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.Objects;
 import java.util.Properties;
-import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.locks.ReentrantLock;
 
 public class MessageDropper {
 
@@ -39,42 +37,77 @@ public class MessageDropper {
 
     public static void addProposeMsgCount() throws IOException {
         //propose file +4
-        concurrentWriteFile("Z:\\hk\\bft-testing\\FUZZ-BFT-SMaRt\\src\\resource\\propose",String.valueOf(nodeNum));
+        initFile("propose");
+        initFile("write");
+        initFile("accept");
+        readAndAdd("propose", nodeNum);
+    }
+
+    private static void initFile(String roundType) throws IOException {
+        String fileName = path + roundType;
+        RandomAccessFile randomAccessFile = null;
+        FileChannel channel = null;
+        try {
+            randomAccessFile = new RandomAccessFile(fileName, "rw");
+            channel = randomAccessFile.getChannel();
+            FileLock lock = null;
+            while (true) {
+                lock = channel.tryLock();
+                if (null == lock) {
+                    System.out.println("Read Process : get lock failed");
+                    Thread.sleep(1000);
+                } else {
+                    break;
+                }
+            }
+            randomAccessFile.seek(0);
+            randomAccessFile.setLength(0);
+            randomAccessFile.writeBytes(String.valueOf(0));
+            System.out.println("init file : write " + 0 + " to " + roundType);
+            lock.release();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (null != randomAccessFile) {
+                randomAccessFile.close();
+            }
+            if (null != channel) {
+                channel.close();
+            }
+        }
     }
 
     public static void minusProposeMsgCount() throws IOException {
-        //propose file +4
-        int currentResult = concurrentReadFile("Z:\\hk\\bft-testing\\FUZZ-BFT-SMaRt\\src\\resource\\propose");
-        concurrentWriteFile("Z:\\hk\\bft-testing\\FUZZ-BFT-SMaRt\\src\\resource\\propose",String.valueOf(currentResult - 1));
+        readAndAdd("propose",  -1);
     }
 
     public static void addWriteMsgCount() throws IOException {
-        int currentResult = concurrentReadFile("Z:\\hk\\bft-testing\\FUZZ-BFT-SMaRt\\src\\resource\\write");
-        concurrentWriteFile("Z:\\hk\\bft-testing\\FUZZ-BFT-SMaRt\\src\\resource\\write",String.valueOf(currentResult + nodeNum - 1));
+        readAndAdd("write", nodeNum - 1);
     }
 
     public static void minusWriteMsgCount() throws IOException {
-        //propose file +4
-        int currentResult = concurrentReadFile("Z:\\hk\\bft-testing\\FUZZ-BFT-SMaRt\\src\\resource\\write");
-        concurrentWriteFile("Z:\\hk\\bft-testing\\FUZZ-BFT-SMaRt\\src\\resource\\write",String.valueOf(currentResult - 1));
+        //-1
+        readAndAdd("write",  -1);
     }
 
     public static void addAcceptMsgCount() throws IOException {
-        int currentResult = concurrentReadFile("Z:\\hk\\bft-testing\\FUZZ-BFT-SMaRt\\src\\resource\\accept");
-        concurrentWriteFile("Z:\\hk\\bft-testing\\FUZZ-BFT-SMaRt\\src\\resource\\accept",String.valueOf(currentResult + nodeNum - 1));
+        //readAndAdd("accept", nodeNum - 1);
     }
 
     public static void minusAcceptMsgCount() throws IOException {
-        //propose file +4
-        int currentResult = concurrentReadFile("Z:\\hk\\bft-testing\\FUZZ-BFT-SMaRt\\src\\resource\\accept");
-        concurrentWriteFile("Z:\\hk\\bft-testing\\FUZZ-BFT-SMaRt\\src\\resource\\accept",String.valueOf(currentResult - 1));
+        //readAndAdd("accept",  -1);
     }
 
     public static boolean existWaitingMessage(String type) throws IOException {
-        return concurrentReadFile(path + type) != 0;
+        if (onlyRead(type) == 0) {
+            System.out.println("type: " + type + " messages clear!");
+            return false;
+        }
+        else return true;
     }
 
-    public static int concurrentReadFile(String fileName) throws IOException {
+    public static int onlyRead(String roundType) throws IOException {
+        String fileName = path + roundType;
         RandomAccessFile randomAccessFile = null;
         FileChannel channel = null;
         String result = null;
@@ -86,7 +119,7 @@ public class MessageDropper {
                 lock = channel.tryLock();
                 if (null == lock) {
                     System.out.println("Read Process : get lock failed");
-                    Thread.sleep(100);
+                    Thread.sleep(1000);
                 } else {
                     break;
                 }
@@ -94,7 +127,7 @@ public class MessageDropper {
             byte[] target = new byte[8];
             int len = randomAccessFile.read(target);
             result = new String(target, 0, len).trim();
-            System.out.println("Read RandomAccessFile : get " + result);
+            System.out.println("Read RandomAccessFile : get " + result + " from " + roundType);
             lock.release();
         } catch (Exception e) {
             e.printStackTrace();
@@ -109,9 +142,11 @@ public class MessageDropper {
         return result == null ? 0 : Integer.parseInt(result);
     }
 
-    public static void concurrentWriteFile(String fileName, String content) throws IOException {
+    public static void readAndAdd(String roundType, int num) throws IOException {
+        String fileName = path + roundType;
         RandomAccessFile randomAccessFile = null;
         FileChannel channel = null;
+        int result;
         try {
             randomAccessFile = new RandomAccessFile(fileName, "rw");
             channel = randomAccessFile.getChannel();
@@ -120,17 +155,20 @@ public class MessageDropper {
                 lock = channel.tryLock();
                 if (null == lock) {
                     System.out.println("Read Process : get lock failed");
-                    Thread.sleep(100);
+                    Thread.sleep(1000);
                 } else {
                     break;
                 }
             }
-            System.out.println("Write RandomAccessFile : get lock");
+            byte[] target = new byte[8];
+            int len = randomAccessFile.read(target);
+            result = Integer.parseInt(new String(target, 0, len).trim());
+            System.out.println("RandomAccessFile : get " + result + " from " + roundType);
             randomAccessFile.seek(0);
             randomAccessFile.setLength(0);
-            randomAccessFile.writeBytes(content);
+            randomAccessFile.writeBytes(String.valueOf(result + num));
+            System.out.println("RandomAccessFile : write " + (result + num) + " to " + roundType);
             lock.release();
-            System.out.println("Write RandomAccessFile : release lock");
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
