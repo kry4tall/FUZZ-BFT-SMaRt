@@ -22,6 +22,7 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 
 import bftsmart.tom.ServiceProxy;
+import bftsmart.util.MessageDropper;
 
 /**
  * Example client that updates a BFT replicated service (a counter).
@@ -41,16 +42,30 @@ public class CounterClient {
         ServiceProxy counterProxy = new ServiceProxy(Integer.parseInt(args[0]));
         
         try {
-
             int inc = Integer.parseInt(args[1]);
-            int numberOfOps = (args.length > 2) ? Integer.parseInt(args[2]) : 1000;
+            int numberOfOps = (args.length > 2) ? Integer.parseInt(args[2]) : 10;
 
             for (int i = 0; i < numberOfOps; i++) {
+                if (i>0){
+                    try {
+                        while (MessageDropper.arriveToRound("accept"))
+                        {
+                            Thread.sleep(1000);
+                            System.out.println("sleep for one second  ~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+                        }
+                    } catch (IOException | InterruptedException e) {
+                        throw new RuntimeException(e);
+                    }
+                }
+                // init sync util
+                MessageDropper.initFile();
 
+
+                Thread.sleep(3000);
                 ByteArrayOutputStream out = new ByteArrayOutputStream(4);
                 new DataOutputStream(out).writeInt(inc);
 
-                System.out.print("Invocation " + i);
+                System.out.print("Invocation " + i + "   ");
                 byte[] reply = (inc == 0)?
                         counterProxy.invokeUnordered(out.toByteArray()):
                 	counterProxy.invokeOrdered(out.toByteArray()); //magic happens here
@@ -58,8 +73,6 @@ public class CounterClient {
                 if(reply != null) {
                     int newValue = new DataInputStream(new ByteArrayInputStream(reply)).readInt();
                     System.out.println(", returned value: " + newValue);
-                    if (newValue % 10 == 0)
-                        System.exit(0);
                 } else {
                     System.out.println(", ERROR! Exiting.");
                     break;
@@ -67,6 +80,8 @@ public class CounterClient {
             }
         } catch(IOException | NumberFormatException e){
             counterProxy.close();
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
         }
     }
 }

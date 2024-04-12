@@ -16,15 +16,11 @@ limitations under the License.
 package bftsmart.consensus.roles;
 
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.PrintWriter;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 
 import bftsmart.communication.ServerCommunicationSystem;
-import bftsmart.communication.server.ServerConnection;
 import bftsmart.consensus.Consensus;
 import bftsmart.tom.core.ExecutionManager;
 import bftsmart.consensus.Epoch;
@@ -132,29 +128,6 @@ public final class Acceptor {
      */
     public void processMessage(ConsensusMessage msg) {
         if(MessageDropper.isToDrop(msg, me)) {
-            switch (msg.getType()){
-                case MessageFactory.PROPOSE:{
-                    try {
-                        MessageDropper.minusProposeMsgCount();
-                    } catch (IOException e) {
-                        throw new RuntimeException(e);
-                    }
-                }break;
-                case MessageFactory.WRITE:{
-                    try {
-                        MessageDropper.minusWriteMsgCount();
-                    } catch (IOException e) {
-                        throw new RuntimeException(e);
-                    }
-                }break;
-                case MessageFactory.ACCEPT:{
-                    try {
-                        MessageDropper.minusAcceptMsgCount();
-                    } catch (IOException e) {
-                        throw new RuntimeException(e);
-                    }
-                }
-            }
             return;
         }
 
@@ -166,11 +139,10 @@ public final class Acceptor {
         switch (msg.getType()){
             case MessageFactory.PROPOSE:{
                 proposeReceived(epoch, msg);
-                MessageDropper.writeToLog(executionManager.consensusesToString(), me);
             }break;
             case MessageFactory.WRITE:{
                 try {
-                    while (MessageDropper.existWaitingMessage("propose"))
+                    while (MessageDropper.arriveToRound("propose"))
                     {
                         Thread.sleep(1000);
                         System.out.println("sleep for one second  ~~~~~~~~~~~~~~~~~~~~~~~~~~~");
@@ -179,11 +151,10 @@ public final class Acceptor {
                     throw new RuntimeException(e);
                 }
                 writeReceived(epoch, msg.getSender(), msg.getValue());
-                MessageDropper.writeToLog(executionManager.consensusesToString(), me);
             }break;
             case MessageFactory.ACCEPT:{
                 try {
-                    while (MessageDropper.existWaitingMessage("write"))
+                    while (MessageDropper.arriveToRound("write"))
                     {
                         Thread.sleep(1000);
                         System.out.println("sleep for one second  ~~~~~~~~~~~~~~~~~~~~~~~~~~~");
@@ -192,34 +163,9 @@ public final class Acceptor {
                     throw new RuntimeException(e);
                 }
                 acceptReceived(epoch, msg);
-                MessageDropper.writeToLog(executionManager.consensusesToString(), me);
             }
         }
         consensus.lock.unlock();
-
-        switch (msg.getType()){
-            case MessageFactory.PROPOSE:{
-                try {
-                    MessageDropper.minusProposeMsgCount();
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
-                }
-            }break;
-            case MessageFactory.WRITE:{
-                try {
-                    MessageDropper.minusWriteMsgCount();
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
-                }
-            }break;
-            case MessageFactory.ACCEPT:{
-                try {
-                    MessageDropper.minusAcceptMsgCount();
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
-                }
-            }
-        }
 
     }
 
@@ -237,6 +183,7 @@ public final class Acceptor {
         if (msg.getSender() == executionManager.getCurrentLeader() // Is the replica the leader?
                 && epoch.getTimestamp() == 0 && ts == ets && ets == 0) { // Is all this in epoch 0?
             executePropose(epoch, msg.getValue());
+            MessageDropper.writeToLog(executionManager.consensusesToString(), me); // state of propose
         } else {
             logger.debug("Propose received is not from the expected leader");
         }
@@ -295,9 +242,9 @@ public final class Acceptor {
                     communication.send(this.controller.getCurrentViewOtherAcceptors(),
                             cm);
 
-
                     logger.debug("WRITE sent for " + cid);
-                
+
+                    // 本地计算write
                     computeWrite(cid, epoch, epoch.propValueHash);
                 
                     logger.debug("WRITE computed for " + cid);
@@ -382,11 +329,6 @@ public final class Acceptor {
                 {
                     cm = MessageCorrupter.corruptMessage(cm);
                 }
-                try {
-                    MessageDropper.addAcceptMsgCount();
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
-                }
 
                 // Create a cryptographic proof for this ACCEPT message
                 logger.debug("Creating cryptographic proof for my ACCEPT message from consensus " + cid);
@@ -395,6 +337,9 @@ public final class Acceptor {
                 int[] targets = this.controller.getCurrentViewOtherAcceptors();
                 communication.getServersConn().send(targets, cm, true);
 
+                MessageDropper.writeToLog(executionManager.consensusesToString(), me); // state of write
+
+                // 本地计算proof
                 epoch.addToProof(cm);
                 computeAccept(cid, epoch, value);
             }
@@ -508,6 +453,8 @@ public final class Acceptor {
         if (epoch.countAccept(value) > controller.getQuorum() && !epoch.getConsensus().isDecided()) {
             logger.debug("Deciding consensus " + cid);
             decide(epoch);
+            // end of accept round
+            MessageDropper.writeToLog(executionManager.consensusesToString(), me); // state of accept
         }
     }
 

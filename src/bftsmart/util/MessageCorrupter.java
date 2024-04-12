@@ -4,10 +4,7 @@ import bftsmart.consensus.messages.ConsensusMessage;
 
 import java.io.*;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Objects;
-import java.util.Properties;
-import java.util.Random;
+import java.util.*;
 
 public class MessageCorrupter {
 
@@ -30,6 +27,7 @@ public class MessageCorrupter {
     public static int updateRandomNum()
     {
         return random.nextInt();
+        // return 2;
     }
 
     public static boolean isByzantineNode(int nodeId)
@@ -48,15 +46,15 @@ public class MessageCorrupter {
         int epoch = msg.getEpoch();
         byte[] value = msg.getValue();
 
-        switch (randomNum % 3) {
+        switch (randomNum % 4) {
             case 0: // corrupt view #
                 if(id == 0)
                     id = 1;
                 else switch ((randomNum/2) % 2) {
                     case 0:
-                        id = id - 1; break;
+                        id = id - 1;
                     case 1:
-                        id = id + 1;break;
+                        id = id + 1;
                 }
                 break;
             case 1: // corrupt seq #
@@ -64,23 +62,33 @@ public class MessageCorrupter {
                     epoch = 1;
                 else switch ((randomNum/2) % 2) {
                     case 0: // corrupt seq #
-                        epoch = epoch - 1; break;
+                        epoch = epoch - 1;
                     case 1: // corrupt seq #
-                        epoch = epoch + 1; break;
+                        epoch = epoch + 1;
                 }
                 break;
-            case 2: // do nothing
+            case 2:
+                if(type == 44781)
+                    type = 44782;
+                else if(type == 44783)
+                    type = 44782;
+                else switch ((randomNum/2) % 2) {
+                    case 0: // corrupt seq #
+                        type = type - 1;
+                    case 1: // corrupt seq #
+                        type = type + 1;
+                }
+                break;
+            case 3: // do nothing
                 return msg;
         }
-        ConsensusMessage newCM = new ConsensusMessage(type,id,epoch, from, value);
+        ConsensusMessage newCM = new ConsensusMessage(type, id, epoch, from, value);
         try {
             File outputFile = new File(corruptOutputFilePath);
             FileWriter fw = new FileWriter(outputFile, true);
             PrintWriter pw = new PrintWriter(fw);
-            SimpleDateFormat formatter= new SimpleDateFormat("yyyy-MM-dd 'at' HH:mm:ss z");
-            Date date = new Date(System.currentTimeMillis());
-            pw.println("Original message: " + msg + "; After mutated: " + newCM + "; current time: " + formatter.format(date));
-            System.out.println("Original message: " + msg + "; After mutated: " + newCM + "; current time: " + formatter.format(date));
+            pw.println("Original message: " + msg + "; After mutated: " + newCM);
+            System.out.println("Original message: " + msg + "; After mutated: " + newCM);
             pw.flush();
             fw.flush();
             pw.close();

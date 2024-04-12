@@ -1,0 +1,1066 @@
+Z:\Java\jdk-1.8\bin\java.exe "-javaagent:Z:\IntelliJ IDEA 2023.1.4\lib\idea_rt.jar=6144:Z:\IntelliJ IDEA 2023.1.4\bin" -Dfile.encoding=UTF-8 -classpath Z:\Java\jdk-1.8\jre\lib\charsets.jar;Z:\Java\jdk-1.8\jre\lib\deploy.jar;Z:\Java\jdk-1.8\jre\lib\ext\access-bridge-64.jar;Z:\Java\jdk-1.8\jre\lib\ext\cldrdata.jar;Z:\Java\jdk-1.8\jre\lib\ext\dnsns.jar;Z:\Java\jdk-1.8\jre\lib\ext\jaccess.jar;Z:\Java\jdk-1.8\jre\lib\ext\jfxrt.jar;Z:\Java\jdk-1.8\jre\lib\ext\localedata.jar;Z:\Java\jdk-1.8\jre\lib\ext\nashorn.jar;Z:\Java\jdk-1.8\jre\lib\ext\sunec.jar;Z:\Java\jdk-1.8\jre\lib\ext\sunjce_provider.jar;Z:\Java\jdk-1.8\jre\lib\ext\sunmscapi.jar;Z:\Java\jdk-1.8\jre\lib\ext\sunpkcs11.jar;Z:\Java\jdk-1.8\jre\lib\ext\zipfs.jar;Z:\Java\jdk-1.8\jre\lib\javaws.jar;Z:\Java\jdk-1.8\jre\lib\jce.jar;Z:\Java\jdk-1.8\jre\lib\jfr.jar;Z:\Java\jdk-1.8\jre\lib\jfxswt.jar;Z:\Java\jdk-1.8\jre\lib\jsse.jar;Z:\Java\jdk-1.8\jre\lib\management-agent.jar;Z:\Java\jdk-1.8\jre\lib\plugin.jar;Z:\Java\jdk-1.8\jre\lib\resources.jar;Z:\Java\jdk-1.8\jre\lib\rt.jar;Z:\hk\bft-testing\FUZZ-BFT-SMaRt\out\production\FUZZ-BFT-SMaRt;Z:\hk\bft-testing\FUZZ-BFT-SMaRt\lib\logback-classic-1.2.3.jar;Z:\hk\bft-testing\FUZZ-BFT-SMaRt\lib\logback-core-1.2.3.jar;Z:\hk\bft-testing\FUZZ-BFT-SMaRt\lib\slf4j-api-1.7.25.jar;Z:\hk\bft-testing\FUZZ-BFT-SMaRt\lib\netty-all-4.1.30.Final.jar;Z:\hk\bft-testing\FUZZ-BFT-SMaRt\lib\commons-codec-1.11.jar;Z:\hk\bft-testing\FUZZ-BFT-SMaRt\lib\core-0.1.4.jar bftsmart.demo.counter.CounterServer 3
+23:32:59.345 [main] INFO bftsmart.reconfiguration.ServerViewController - Using view stored on disk
+23:32:59.654 [main] INFO bftsmart.communication.server.ServerConnection - Diffie-Hellman complete with 0
+23:32:59.692 [main] INFO bftsmart.communication.server.ServerConnection - Diffie-Hellman complete with 1
+23:32:59.721 [main] INFO bftsmart.communication.server.ServerConnection - Diffie-Hellman complete with 2
+23:32:59.733 [main] DEBUG io.netty.util.internal.logging.InternalLoggerFactory - Using SLF4J as the default logging framework
+23:32:59.734 [main] DEBUG io.netty.util.internal.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+23:32:59.734 [main] DEBUG io.netty.util.internal.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+23:32:59.742 [main] DEBUG io.netty.channel.MultithreadEventLoopGroup - -Dio.netty.eventLoopThreads: 24
+23:32:59.756 [main] DEBUG io.netty.channel.nio.NioEventLoop - -Dio.netty.noKeySetOptimization: false
+23:32:59.756 [main] DEBUG io.netty.channel.nio.NioEventLoop - -Dio.netty.selectorAutoRebuildThreshold: 512
+23:32:59.766 [main] DEBUG io.netty.util.internal.PlatformDependent - Platform: Windows
+23:32:59.767 [main] DEBUG io.netty.util.internal.PlatformDependent0 - -Dio.netty.noUnsafe: false
+23:32:59.767 [main] DEBUG io.netty.util.internal.PlatformDependent0 - Java version: 8
+23:32:59.768 [main] DEBUG io.netty.util.internal.PlatformDependent0 - sun.misc.Unsafe.theUnsafe: available
+23:32:59.768 [main] DEBUG io.netty.util.internal.PlatformDependent0 - sun.misc.Unsafe.copyMemory: available
+23:32:59.769 [main] DEBUG io.netty.util.internal.PlatformDependent0 - java.nio.Buffer.address: available
+23:32:59.769 [main] DEBUG io.netty.util.internal.PlatformDependent0 - direct buffer constructor: available
+23:32:59.769 [main] DEBUG io.netty.util.internal.PlatformDependent0 - java.nio.Bits.unaligned: available, true
+23:32:59.769 [main] DEBUG io.netty.util.internal.PlatformDependent0 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+23:32:59.769 [main] DEBUG io.netty.util.internal.PlatformDependent0 - java.nio.DirectByteBuffer.<init>(long, int): available
+23:32:59.769 [main] DEBUG io.netty.util.internal.PlatformDependent - sun.misc.Unsafe: available
+23:32:59.770 [main] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.tmpdir: C:\Users\ADMINI~1\AppData\Local\Temp (java.io.tmpdir)
+23:32:59.770 [main] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+23:32:59.771 [main] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.maxDirectMemory: 3804758016 bytes
+23:32:59.771 [main] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+23:32:59.771 [main] DEBUG io.netty.util.internal.CleanerJava6 - java.nio.ByteBuffer.cleaner(): available
+23:32:59.771 [main] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.noPreferDirect: false
+23:32:59.776 [main] DEBUG io.netty.util.internal.PlatformDependent - org.jctools-core.MpscChunkedArrayQueue: available
+23:32:59.828 [main] DEBUG io.netty.channel.DefaultChannelId - -Dio.netty.processId: 12356 (auto-detected)
+23:32:59.829 [main] DEBUG io.netty.util.NetUtil - -Djava.net.preferIPv4Stack: false
+23:32:59.829 [main] DEBUG io.netty.util.NetUtil - -Djava.net.preferIPv6Addresses: false
+23:32:59.867 [main] DEBUG io.netty.util.NetUtil - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+23:32:59.868 [main] DEBUG io.netty.util.NetUtil - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+23:32:59.906 [main] DEBUG io.netty.channel.DefaultChannelId - -Dio.netty.machineId: d8:bb:c1:ff:fe:67:af:13 (auto-detected)
+23:32:59.914 [main] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.level: simple
+23:32:59.914 [main] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.targetRecords: 4
+23:32:59.929 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.numHeapArenas: 24
+23:32:59.929 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.numDirectArenas: 24
+23:32:59.929 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.pageSize: 8192
+23:32:59.929 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxOrder: 11
+23:32:59.929 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.chunkSize: 16777216
+23:32:59.929 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.tinyCacheSize: 512
+23:32:59.929 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.smallCacheSize: 256
+23:32:59.929 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.normalCacheSize: 64
+23:32:59.929 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+23:32:59.929 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimInterval: 8192
+23:32:59.929 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.useCacheForAllThreads: true
+23:32:59.934 [main] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.allocator.type: pooled
+23:32:59.934 [main] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.threadLocalDirectBufferSize: 0
+23:32:59.934 [main] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+23:32:59.942 [main] INFO bftsmart.communication.client.netty.NettyClientServerCommunicationSystemServerSide - ID = 3
+23:32:59.943 [main] INFO bftsmart.communication.client.netty.NettyClientServerCommunicationSystemServerSide - N = 4
+23:32:59.943 [main] INFO bftsmart.communication.client.netty.NettyClientServerCommunicationSystemServerSide - F = 1
+23:32:59.943 [main] INFO bftsmart.communication.client.netty.NettyClientServerCommunicationSystemServerSide - Port = 11030
+23:32:59.943 [main] INFO bftsmart.communication.client.netty.NettyClientServerCommunicationSystemServerSide - requestTimeout = 2000
+23:32:59.943 [main] INFO bftsmart.communication.client.netty.NettyClientServerCommunicationSystemServerSide - maxBatch = 400
+23:32:59.943 [main] INFO bftsmart.communication.client.netty.NettyClientServerCommunicationSystemServerSide - Using MACs
+23:32:59.943 [main] INFO bftsmart.communication.client.netty.NettyClientServerCommunicationSystemServerSide - Binded replica to IP address 127.0.0.1
+23:32:59.943 [main] INFO bftsmart.tom.ServiceReplica - In current view: ID:0; F:1; Processes:0(/127.0.0.1:11000),1(/127.0.0.1:11010),2(/127.0.0.1:11020),3(/127.0.0.1:11030),
+23:32:59.955 [TOM Layer] DEBUG bftsmart.tom.core.TOMLayer - Running.
+23:32:59.955 [TOM Layer] DEBUG bftsmart.tom.core.TOMLayer - Next leader for CID=0: 0
+23:32:59.957 [Sender for 0] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 2015393169
+23:32:59.957 [Sender for 2] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 2015393169
+23:32:59.957 [Sender for 1] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 2015393169
+23:32:59.957 [Sender for 2] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 1474547173
+23:32:59.957 [Sender for 0] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 1474547173
+23:32:59.957 [Sender for 1] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 1474547173
+23:33:00.474 [Sender for 1] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 1994884325
+23:33:00.971 [Sender for 1] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 1926766305
+23:33:00.971 [Sender for 2] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 1926766305
+23:33:00.971 [Sender for 0] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 1926766305
+23:33:01.985 [Sender for 2] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 937070302
+23:33:01.985 [Sender for 0] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 937070302
+23:33:01.985 [Sender for 1] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 937070302
+23:33:02.996 [Sender for 2] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 1265462565
+23:33:02.996 [Sender for 1] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 1265462565
+23:33:02.996 [Sender for 0] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 1265462565
+23:33:04.000 [Sender for 0] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 242215468
+23:33:04.000 [Sender for 2] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 242215468
+23:33:04.000 [Sender for 1] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 242215468
+23:33:04.001 [Server CS] INFO bftsmart.statemanagement.strategy.StandardStateManager - Replica state is up to date
+23:33:04.001 [Delivery Thread] INFO bftsmart.tom.core.DeliveryThread - Retrieving State
+23:33:04.001 [Delivery Thread] INFO bftsmart.tom.core.DeliveryThread - Ready to process operations
+23:33:09.730 [Thread-0] DEBUG bftsmart.communication.server.ServersCommunicationLayer - Server socket timed out, retrying
+23:33:12.756 [nioEventLoopGroup-3-1] DEBUG bftsmart.communication.client.netty.NettyTOMMessageDecoder - new NettyTOMMessageDecoder!!, isClient=false
+23:33:12.758 [nioEventLoopGroup-3-1] INFO bftsmart.communication.client.netty.NettyClientServerCommunicationSystemServerSide - Session Created, active clients=0
+23:33:15.772 [nioEventLoopGroup-3-1] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.maxCapacityPerThread: 4096
+23:33:15.772 [nioEventLoopGroup-3-1] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.maxSharedCapacityFactor: 2
+23:33:15.772 [nioEventLoopGroup-3-1] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.linkCapacity: 16
+23:33:15.772 [nioEventLoopGroup-3-1] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.ratio: 8
+23:33:15.778 [nioEventLoopGroup-3-1] DEBUG io.netty.buffer.AbstractByteBuf - -Dio.netty.buffer.checkAccessible: true
+23:33:15.778 [nioEventLoopGroup-3-1] DEBUG io.netty.buffer.AbstractByteBuf - -Dio.netty.buffer.checkBounds: true
+23:33:15.779 [nioEventLoopGroup-3-1] DEBUG io.netty.util.ResourceLeakDetectorFactory - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@68129e9a
+23:33:15.784 [nioEventLoopGroup-3-1] DEBUG bftsmart.communication.client.netty.NettyTOMMessageDecoder - Creating MAC/public key stuff, first message from client1
+23:33:15.784 [nioEventLoopGroup-3-1] DEBUG bftsmart.communication.client.netty.NettyTOMMessageDecoder - sessionTable size=0
+23:33:15.786 [nioEventLoopGroup-3-1] DEBUG bftsmart.communication.client.netty.NettyTOMMessageDecoder - active clients 1
+23:33:15.787 [nioEventLoopGroup-3-1] DEBUG bftsmart.communication.client.netty.NettyTOMMessageDecoder - Decoded reply from 1 with sequence number 0
+23:33:15.788 [nioEventLoopGroup-3-1] DEBUG bftsmart.tom.core.TOMLayer - Received TOMMessage from client 1 with sequence number 0 for session -85882001
+23:33:15.788 [nioEventLoopGroup-3-1] DEBUG bftsmart.clientsmanagement.ClientsManager - Creating new client data, client id=1
+23:33:15.795 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=PROPOSE, number=0, epoch=1, from=0
+23:33:15.795 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=PROPOSE, number=0, epoch=1, from=0
+23:33:15.795 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus -1 and my last consensus is -1
+23:33:15.795 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 0 can be processed
+23:33:15.795 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 0
+23:33:15.802 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - PROPOSE for consensus 0
+23:33:15.805 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Propose received is not from the expected leader
+23:33:15.805 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=PROPOSE, number=0, epoch=0, from=0
+23:33:15.805 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=PROPOSE, number=0, epoch=0, from=0
+23:33:15.805 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus -1 and my last consensus is -1
+23:33:15.805 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 0 can be processed
+23:33:15.805 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 0
+23:33:15.806 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - PROPOSE for consensus 0
+23:33:15.806 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Executing propose for 0,0
+23:33:15.807 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have written value [-58, 124, 11, 123, -68, 28, -29, -118, -25, 57, 51, -36, 3, -23, -1, -13, 69, -27, 52, 123, 3, -6, 66, -32, 13, -6, -62, 5, -19, 34, 80, 26, 104, -125, 123, -31, 117, -43, -95, 85, 57, 64, 77, -117, -62, -81, 61, -123, -43, -36, -26, -1, -26, 91, -8, 113, -89, 13, 75, 55, -60, -47, -27, 89] in consensus instance 0 with timestamp 0
+23:33:15.807 [Server CS] DEBUG bftsmart.tom.core.TOMLayer - Modifying inExec from -1 to 0
+23:33:15.807 [Server CS] DEBUG bftsmart.tom.core.TOMLayer - Checking proposed value
+23:33:15.811 [Server CS] DEBUG bftsmart.tom.core.TOMLayer - Successfully deserialized batch
+23:33:15.811 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Sending WRITE for 0
+23:33:15.812 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - --------sending----------> type=WRITE, number=0, epoch=0, from=3
+23:33:15.813 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - WRITE sent for 0
+23:33:15.813 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 1 WRITEs for 0,0
+23:33:15.813 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - WRITE computed for 0
+23:33:15.813 [Sender for 2] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 1495546217
+23:33:15.813 [Sender for 0] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 1495546217
+23:33:15.813 [Sender for 1] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 1495546217
+23:33:15.815 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=WRITE, number=0, epoch=0, from=0
+23:33:15.815 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=WRITE, number=0, epoch=0, from=0
+23:33:15.815 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus 0 and my last consensus is -1
+23:33:15.815 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 0 can be processed
+23:33:15.816 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 0
+23:33:15.817 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - WRITE from 0 for consensus 0
+23:33:15.817 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 2 WRITEs for 0,0
+23:33:15.817 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=WRITE, number=0, epoch=0, from=1
+23:33:15.817 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=WRITE, number=0, epoch=0, from=1
+23:33:15.817 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus 0 and my last consensus is -1
+23:33:15.817 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 0 can be processed
+23:33:15.817 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 0
+23:33:15.819 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - WRITE from 1 for consensus 0
+23:33:15.819 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 3 WRITEs for 0,0
+23:33:15.819 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Sending WRITE for 0
+23:33:15.819 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Setting consensus 0 QuorumWrite tiemstamp to 0 and value [-58, 124, 11, 123, -68, 28, -29, -118, -25, 57, 51, -36, 3, -23, -1, -13, 69, -27, 52, 123, 3, -6, 66, -32, 13, -6, -62, 5, -19, 34, 80, 26, 104, -125, 123, -31, 117, -43, -95, 85, 57, 64, 77, -117, -62, -81, 61, -123, -43, -36, -26, -1, -26, 91, -8, 113, -89, 13, 75, 55, -60, -47, -27, 89]
+23:33:15.819 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Creating cryptographic proof for my ACCEPT message from consensus 0
+23:33:15.820 [Sender for 0] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 1738662426
+23:33:15.820 [Sender for 2] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 1738662426
+23:33:15.820 [Sender for 1] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 1738662426
+23:33:15.822 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 1 ACCEPTs for 0,0
+23:33:15.822 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=WRITE, number=0, epoch=0, from=2
+23:33:15.822 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=WRITE, number=0, epoch=0, from=2
+23:33:15.822 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus 0 and my last consensus is -1
+23:33:15.822 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 0 can be processed
+23:33:15.822 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 0
+23:33:15.823 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - WRITE from 2 for consensus 0
+23:33:15.823 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 4 WRITEs for 0,0
+23:33:15.823 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=ACCEPT, number=0, epoch=0, from=0
+23:33:15.823 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=ACCEPT, number=0, epoch=0, from=0
+23:33:15.823 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus 0 and my last consensus is -1
+23:33:15.823 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 0 can be processed
+23:33:15.823 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 0
+23:33:15.824 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - ACCEPT from 0 for consensus 0
+23:33:15.824 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 2 ACCEPTs for 0,0
+23:33:15.824 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=ACCEPT, number=0, epoch=0, from=2
+23:33:15.824 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=ACCEPT, number=0, epoch=0, from=2
+23:33:15.824 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus 0 and my last consensus is -1
+23:33:15.824 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 0 can be processed
+23:33:15.824 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 0
+23:33:15.824 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - ACCEPT from 2 for consensus 0
+23:33:15.824 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 3 ACCEPTs for 0,0
+23:33:15.824 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Deciding consensus 0
+23:33:15.824 [Server CS] DEBUG bftsmart.consensus.Consensus - Delivering decision from consensus 0 to the TOMLayer/DeliveryThread
+23:33:15.824 [Server CS] DEBUG bftsmart.tom.core.DeliveryThread - Using cached requests from the propose.
+23:33:15.824 [Server CS] DEBUG bftsmart.clientsmanagement.ClientsManager - Updating client manager
+23:33:15.824 [Server CS] DEBUG bftsmart.clientsmanagement.ClientsManager - Finished updating client manager
+23:33:15.825 [Server CS] DEBUG bftsmart.tom.core.DeliveryThread - Consensus 0 finished. Decided size=1
+23:33:15.825 [Server CS] DEBUG bftsmart.tom.core.DeliveryThread - Decision from consensus 0 does not contain good reconfiguration
+23:33:15.825 [Server CS] DEBUG bftsmart.tom.core.TOMLayer - Modifying inExec from 0 to -1
+23:33:15.829 [Delivery Thread] DEBUG bftsmart.tom.core.DeliveryThread - Using cached requests from the propose.
+23:33:15.829 [Delivery Thread] DEBUG bftsmart.tom.ServiceReplica - Processing TOMMessage from client 1 with sequence number 0 for session -85882001 decided in consensus 0
+23:33:15.830 [Delivery Thread] DEBUG bftsmart.tom.ServiceReplica - Delivering request from 1 via SingleExecutable
+(1) Counter was incremented. Current value = 10
+23:33:15.830 [Delivery Thread] DEBUG bftsmart.tom.ServiceReplica - sending reply to 1
+23:33:18.852 [nioEventLoopGroup-3-1] DEBUG bftsmart.communication.client.netty.NettyTOMMessageDecoder - Decoded reply from 1 with sequence number 1
+23:33:18.852 [nioEventLoopGroup-3-1] DEBUG bftsmart.tom.core.TOMLayer - Received TOMMessage from client 1 with sequence number 1 for session -85882001
+23:33:18.854 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=PROPOSE, number=1, epoch=0, from=0
+23:33:18.854 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=PROPOSE, number=1, epoch=0, from=0
+23:33:18.854 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus -1 and my last consensus is 0
+23:33:18.854 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 1 can be processed
+23:33:18.854 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 1
+23:33:18.854 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - PROPOSE for consensus 1
+23:33:18.854 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Executing propose for 1,0
+23:33:18.854 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have written value [-67, 55, -99, 43, 29, -56, -4, -67, 111, -117, -87, 124, -41, 119, -71, 48, 14, -78, -7, -104, 8, 4, -87, 42, -84, -29, -110, -33, 23, -124, 26, -121, 42, 1, 22, 1, 117, -112, 117, 67, -77, -86, 36, 26, -24, 23, -75, -30, 14, -79, -1, 44, 22, 121, 96, -85, -70, -105, 49, 18, -72, -123, -45, -128] in consensus instance 1 with timestamp 0
+23:33:18.855 [Server CS] DEBUG bftsmart.tom.core.TOMLayer - Modifying inExec from -1 to 1
+23:33:18.855 [Server CS] DEBUG bftsmart.tom.core.TOMLayer - Checking proposed value
+23:33:18.855 [Server CS] DEBUG bftsmart.tom.core.TOMLayer - Successfully deserialized batch
+23:33:18.855 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Sending WRITE for 1
+23:33:18.855 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - --------sending----------> type=WRITE, number=1, epoch=0, from=3
+23:33:18.855 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - WRITE sent for 1
+23:33:18.855 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 1 WRITEs for 1,0
+23:33:18.855 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - WRITE computed for 1
+23:33:18.855 [Sender for 0] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 1059841185
+23:33:18.855 [Sender for 2] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 1059841185
+23:33:18.855 [Sender for 1] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 1059841185
+23:33:18.857 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=PROPOSE, number=1, epoch=0, from=0
+23:33:18.857 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=PROPOSE, number=1, epoch=0, from=0
+23:33:18.857 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus 1 and my last consensus is 0
+23:33:18.857 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 1 can be processed
+23:33:18.857 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 1
+23:33:18.857 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - PROPOSE for consensus 1
+23:33:18.857 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Executing propose for 1,0
+23:33:18.859 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=WRITE, number=1, epoch=0, from=0
+23:33:18.859 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=WRITE, number=1, epoch=0, from=0
+23:33:18.859 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus 1 and my last consensus is 0
+23:33:18.859 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 1 can be processed
+23:33:18.859 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 1
+23:33:18.859 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - WRITE from 0 for consensus 1
+23:33:18.859 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 2 WRITEs for 1,0
+23:33:18.859 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=WRITE, number=1, epoch=0, from=2
+23:33:18.859 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=WRITE, number=1, epoch=0, from=2
+23:33:18.859 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus 1 and my last consensus is 0
+23:33:18.859 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 1 can be processed
+23:33:18.859 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 1
+23:33:18.860 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - WRITE from 2 for consensus 1
+23:33:18.860 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 3 WRITEs for 1,0
+23:33:18.860 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Sending WRITE for 1
+23:33:18.860 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Setting consensus 1 QuorumWrite tiemstamp to 0 and value [-67, 55, -99, 43, 29, -56, -4, -67, 111, -117, -87, 124, -41, 119, -71, 48, 14, -78, -7, -104, 8, 4, -87, 42, -84, -29, -110, -33, 23, -124, 26, -121, 42, 1, 22, 1, 117, -112, 117, 67, -77, -86, 36, 26, -24, 23, -75, -30, 14, -79, -1, 44, 22, 121, 96, -85, -70, -105, 49, 18, -72, -123, -45, -128]
+23:33:18.860 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Creating cryptographic proof for my ACCEPT message from consensus 1
+23:33:18.860 [Sender for 0] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 521122340
+23:33:18.860 [Sender for 1] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 521122340
+23:33:18.860 [Sender for 2] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 521122340
+23:33:18.862 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 1 ACCEPTs for 1,0
+23:33:18.862 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=WRITE, number=1, epoch=0, from=1
+23:33:18.862 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=WRITE, number=1, epoch=0, from=1
+23:33:18.862 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus 1 and my last consensus is 0
+23:33:18.862 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 1 can be processed
+23:33:18.862 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 1
+23:33:18.862 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - WRITE from 1 for consensus 1
+23:33:18.862 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 4 WRITEs for 1,0
+23:33:18.862 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=ACCEPT, number=1, epoch=0, from=2
+23:33:18.862 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=ACCEPT, number=1, epoch=0, from=2
+23:33:18.862 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus 1 and my last consensus is 0
+23:33:18.862 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 1 can be processed
+23:33:18.862 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 1
+23:33:18.862 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - ACCEPT from 2 for consensus 1
+23:33:18.862 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 2 ACCEPTs for 1,0
+23:33:18.862 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=ACCEPT, number=1, epoch=0, from=0
+23:33:18.862 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=ACCEPT, number=1, epoch=0, from=0
+23:33:18.863 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus 1 and my last consensus is 0
+23:33:18.863 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 1 can be processed
+23:33:18.863 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 1
+23:33:18.863 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - ACCEPT from 0 for consensus 1
+23:33:18.863 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 3 ACCEPTs for 1,0
+23:33:18.863 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Deciding consensus 1
+23:33:18.863 [Server CS] DEBUG bftsmart.consensus.Consensus - Delivering decision from consensus 1 to the TOMLayer/DeliveryThread
+23:33:18.863 [Server CS] DEBUG bftsmart.tom.core.DeliveryThread - Using cached requests from the propose.
+23:33:18.863 [Server CS] DEBUG bftsmart.clientsmanagement.ClientsManager - Updating client manager
+23:33:18.863 [Server CS] DEBUG bftsmart.clientsmanagement.ClientsManager - Finished updating client manager
+23:33:18.863 [Server CS] DEBUG bftsmart.tom.core.DeliveryThread - Consensus 1 finished. Decided size=1
+23:33:18.863 [Server CS] DEBUG bftsmart.tom.core.DeliveryThread - Decision from consensus 1 does not contain good reconfiguration
+23:33:18.863 [Delivery Thread] DEBUG bftsmart.tom.core.DeliveryThread - Using cached requests from the propose.
+23:33:18.863 [Server CS] DEBUG bftsmart.tom.core.TOMLayer - Modifying inExec from 1 to -1
+23:33:18.863 [Delivery Thread] DEBUG bftsmart.tom.ServiceReplica - Processing TOMMessage from client 1 with sequence number 1 for session -85882001 decided in consensus 1
+23:33:18.863 [Delivery Thread] DEBUG bftsmart.tom.ServiceReplica - Delivering request from 1 via SingleExecutable
+(2) Counter was incremented. Current value = 20
+23:33:18.863 [Delivery Thread] DEBUG bftsmart.tom.ServiceReplica - sending reply to 1
+23:33:19.736 [Thread-0] DEBUG bftsmart.communication.server.ServersCommunicationLayer - Server socket timed out, retrying
+23:33:21.870 [nioEventLoopGroup-3-1] DEBUG bftsmart.communication.client.netty.NettyTOMMessageDecoder - Decoded reply from 1 with sequence number 2
+23:33:21.870 [nioEventLoopGroup-3-1] DEBUG bftsmart.tom.core.TOMLayer - Received TOMMessage from client 1 with sequence number 2 for session -85882001
+23:33:21.871 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=PROPOSE, number=2, epoch=0, from=0
+23:33:21.871 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=PROPOSE, number=2, epoch=0, from=0
+23:33:21.871 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus -1 and my last consensus is 1
+23:33:21.871 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 2 can be processed
+23:33:21.871 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 2
+23:33:21.872 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - PROPOSE for consensus 2
+23:33:21.872 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Executing propose for 2,0
+23:33:21.872 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have written value [-32, -38, -46, -93, 31, 104, 110, 12, 78, 111, -82, 53, -60, 23, -121, -78, -85, -128, 85, 72, -60, 114, 94, -3, -74, 5, -89, -99, 48, 91, -40, -108, 30, 79, -108, 114, -106, -79, -118, -115, -57, -108, 79, -63, -127, 98, -7, 92, -21, 75, -27, 127, -126, 68, -117, -128, -59, -27, 114, 66, -76, 44, 83, -75] in consensus instance 2 with timestamp 0
+23:33:21.872 [Server CS] DEBUG bftsmart.tom.core.TOMLayer - Modifying inExec from -1 to 2
+23:33:21.872 [Server CS] DEBUG bftsmart.tom.core.TOMLayer - Checking proposed value
+23:33:21.872 [Server CS] DEBUG bftsmart.tom.core.TOMLayer - Successfully deserialized batch
+23:33:21.872 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Sending WRITE for 2
+23:33:21.872 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - --------sending----------> type=WRITE, number=2, epoch=0, from=3
+23:33:21.872 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - WRITE sent for 2
+23:33:21.872 [Sender for 0] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 1849693539
+23:33:21.872 [Sender for 1] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 1849693539
+23:33:21.872 [Sender for 2] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 1849693539
+23:33:21.872 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 1 WRITEs for 2,0
+23:33:21.873 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - WRITE computed for 2
+23:33:21.875 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=PROPOSE, number=2, epoch=0, from=0
+23:33:21.875 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=PROPOSE, number=2, epoch=0, from=0
+23:33:21.875 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus 2 and my last consensus is 1
+23:33:21.875 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 2 can be processed
+23:33:21.875 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 2
+23:33:21.875 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - PROPOSE for consensus 2
+23:33:21.875 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Executing propose for 2,0
+23:33:21.877 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=WRITE, number=2, epoch=0, from=0
+23:33:21.877 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=WRITE, number=2, epoch=0, from=0
+23:33:21.877 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus 2 and my last consensus is 1
+23:33:21.877 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 2 can be processed
+23:33:21.877 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 2
+23:33:21.878 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - WRITE from 0 for consensus 2
+23:33:21.878 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 2 WRITEs for 2,0
+23:33:21.878 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=WRITE, number=2, epoch=0, from=2
+23:33:21.878 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=WRITE, number=2, epoch=0, from=2
+23:33:21.878 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus 2 and my last consensus is 1
+23:33:21.878 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 2 can be processed
+23:33:21.878 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 2
+23:33:21.878 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - WRITE from 2 for consensus 2
+23:33:21.878 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 3 WRITEs for 2,0
+23:33:21.878 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Sending WRITE for 2
+23:33:21.878 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Setting consensus 2 QuorumWrite tiemstamp to 0 and value [-32, -38, -46, -93, 31, 104, 110, 12, 78, 111, -82, 53, -60, 23, -121, -78, -85, -128, 85, 72, -60, 114, 94, -3, -74, 5, -89, -99, 48, 91, -40, -108, 30, 79, -108, 114, -106, -79, -118, -115, -57, -108, 79, -63, -127, 98, -7, 92, -21, 75, -27, 127, -126, 68, -117, -128, -59, -27, 114, 66, -76, 44, 83, -75]
+23:33:21.878 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Creating cryptographic proof for my ACCEPT message from consensus 2
+23:33:21.879 [Sender for 2] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 1562093205
+23:33:21.891 [Sender for 0] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 1562093205
+23:33:21.891 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 1 ACCEPTs for 2,0
+23:33:21.891 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=WRITE, number=2, epoch=0, from=1
+23:33:21.891 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=WRITE, number=2, epoch=0, from=1
+23:33:21.891 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus 2 and my last consensus is 1
+23:33:21.891 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 2 can be processed
+23:33:21.891 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 2
+23:33:21.892 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - WRITE from 1 for consensus 2
+23:33:21.892 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 4 WRITEs for 2,0
+23:33:21.892 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=ACCEPT, number=2, epoch=0, from=2
+23:33:21.892 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=ACCEPT, number=2, epoch=0, from=2
+23:33:21.892 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus 2 and my last consensus is 1
+23:33:21.892 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 2 can be processed
+23:33:21.892 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 2
+23:33:21.892 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - ACCEPT from 2 for consensus 2
+23:33:21.892 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 2 ACCEPTs for 2,0
+23:33:21.892 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=ACCEPT, number=2, epoch=0, from=0
+23:33:21.892 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=ACCEPT, number=2, epoch=0, from=0
+23:33:21.895 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus 2 and my last consensus is 1
+23:33:21.895 [Sender for 1] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 1562093205
+23:33:21.895 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 2 can be processed
+23:33:21.895 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 2
+23:33:21.895 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - ACCEPT from 0 for consensus 2
+23:33:21.895 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 3 ACCEPTs for 2,0
+23:33:21.896 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Deciding consensus 2
+23:33:21.896 [Server CS] DEBUG bftsmart.consensus.Consensus - Delivering decision from consensus 2 to the TOMLayer/DeliveryThread
+23:33:21.896 [Server CS] DEBUG bftsmart.tom.core.DeliveryThread - Using cached requests from the propose.
+23:33:21.896 [Server CS] DEBUG bftsmart.clientsmanagement.ClientsManager - Updating client manager
+23:33:21.896 [Server CS] DEBUG bftsmart.clientsmanagement.ClientsManager - Finished updating client manager
+23:33:21.896 [Server CS] DEBUG bftsmart.tom.core.DeliveryThread - Consensus 2 finished. Decided size=1
+23:33:21.896 [Server CS] DEBUG bftsmart.tom.core.DeliveryThread - Decision from consensus 2 does not contain good reconfiguration
+23:33:21.896 [Server CS] DEBUG bftsmart.tom.core.TOMLayer - Modifying inExec from 2 to -1
+23:33:21.896 [Delivery Thread] DEBUG bftsmart.tom.core.DeliveryThread - Using cached requests from the propose.
+23:33:21.898 [Delivery Thread] DEBUG bftsmart.tom.ServiceReplica - Processing TOMMessage from client 1 with sequence number 2 for session -85882001 decided in consensus 2
+23:33:21.898 [Delivery Thread] DEBUG bftsmart.tom.ServiceReplica - Delivering request from 1 via SingleExecutable
+(3) Counter was incremented. Current value = 30
+23:33:21.898 [Delivery Thread] DEBUG bftsmart.tom.ServiceReplica - sending reply to 1
+23:33:24.904 [nioEventLoopGroup-3-1] DEBUG bftsmart.communication.client.netty.NettyTOMMessageDecoder - Decoded reply from 1 with sequence number 3
+23:33:24.904 [nioEventLoopGroup-3-1] DEBUG bftsmart.tom.core.TOMLayer - Received TOMMessage from client 1 with sequence number 3 for session -85882001
+23:33:24.905 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=PROPOSE, number=3, epoch=1, from=0
+23:33:24.905 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=PROPOSE, number=3, epoch=1, from=0
+23:33:24.905 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus -1 and my last consensus is 2
+23:33:24.905 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 3 can be processed
+23:33:24.905 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 3
+23:33:24.905 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - PROPOSE for consensus 3
+23:33:24.905 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Propose received is not from the expected leader
+23:33:24.906 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=PROPOSE, number=3, epoch=0, from=0
+23:33:24.906 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=PROPOSE, number=3, epoch=0, from=0
+23:33:24.906 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus -1 and my last consensus is 2
+23:33:24.906 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 3 can be processed
+23:33:24.906 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 3
+23:33:24.906 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - PROPOSE for consensus 3
+23:33:24.906 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Executing propose for 3,0
+23:33:24.906 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have written value [-90, 6, -123, -33, 43, 82, 33, 54, -118, -64, -42, -42, -86, -58, -128, 86, -84, 84, -15, 103, -47, 61, -42, 97, -107, 91, -23, -11, 27, 14, 54, -94, 12, -128, -18, -90, -50, -63, 58, 58, -102, -115, -28, 65, -48, -3, -120, 124, -118, -52, -5, 98, -18, -46, -40, 120, 24, 55, 42, 80, -32, 120, 81, -92] in consensus instance 3 with timestamp 0
+23:33:24.906 [Server CS] DEBUG bftsmart.tom.core.TOMLayer - Modifying inExec from -1 to 3
+23:33:24.906 [Server CS] DEBUG bftsmart.tom.core.TOMLayer - Checking proposed value
+23:33:24.906 [Server CS] DEBUG bftsmart.tom.core.TOMLayer - Successfully deserialized batch
+23:33:24.906 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Sending WRITE for 3
+23:33:24.906 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - --------sending----------> type=WRITE, number=3, epoch=0, from=3
+23:33:24.906 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - WRITE sent for 3
+23:33:24.906 [Sender for 2] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 110726019
+23:33:24.906 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 1 WRITEs for 3,0
+23:33:24.906 [Sender for 1] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 110726019
+23:33:24.906 [Sender for 0] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 110726019
+23:33:24.906 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - WRITE computed for 3
+23:33:24.908 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=WRITE, number=3, epoch=1, from=0
+23:33:24.908 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=WRITE, number=3, epoch=1, from=0
+23:33:24.908 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus 3 and my last consensus is 2
+23:33:24.908 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 3 can be processed
+23:33:24.908 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 3
+23:33:24.909 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - WRITE from 0 for consensus 3
+23:33:24.909 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 1 WRITEs for 3,1
+23:33:24.909 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=WRITE, number=3, epoch=0, from=2
+23:33:24.909 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=WRITE, number=3, epoch=0, from=2
+23:33:24.909 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus 3 and my last consensus is 2
+23:33:24.909 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 3 can be processed
+23:33:24.909 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 3
+23:33:24.909 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - WRITE from 2 for consensus 3
+23:33:24.909 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 2 WRITEs for 3,0
+23:33:24.909 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=WRITE, number=3, epoch=0, from=1
+23:33:24.909 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=WRITE, number=3, epoch=0, from=1
+23:33:24.909 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus 3 and my last consensus is 2
+23:33:24.909 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 3 can be processed
+23:33:24.909 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 3
+23:33:24.910 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - WRITE from 1 for consensus 3
+23:33:24.910 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 3 WRITEs for 3,0
+23:33:24.910 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Sending WRITE for 3
+23:33:24.910 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Setting consensus 3 QuorumWrite tiemstamp to 0 and value [-90, 6, -123, -33, 43, 82, 33, 54, -118, -64, -42, -42, -86, -58, -128, 86, -84, 84, -15, 103, -47, 61, -42, 97, -107, 91, -23, -11, 27, 14, 54, -94, 12, -128, -18, -90, -50, -63, 58, 58, -102, -115, -28, 65, -48, -3, -120, 124, -118, -52, -5, 98, -18, -46, -40, 120, 24, 55, 42, 80, -32, 120, 81, -92]
+23:33:24.910 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Creating cryptographic proof for my ACCEPT message from consensus 3
+23:33:24.911 [Sender for 1] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 1278077257
+23:33:24.911 [Sender for 2] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 1278077257
+23:33:24.912 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 1 ACCEPTs for 3,0
+23:33:24.912 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=ACCEPT, number=3, epoch=0, from=2
+23:33:24.912 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=ACCEPT, number=3, epoch=0, from=2
+23:33:24.912 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus 3 and my last consensus is 2
+23:33:24.913 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 3 can be processed
+23:33:24.913 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 3
+23:33:24.913 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - ACCEPT from 2 for consensus 3
+23:33:24.913 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 2 ACCEPTs for 3,0
+23:33:24.914 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=ACCEPT, number=3, epoch=0, from=0
+23:33:24.914 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=ACCEPT, number=3, epoch=0, from=0
+23:33:24.914 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus 3 and my last consensus is 2
+23:33:24.914 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 3 can be processed
+23:33:24.914 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 3
+23:33:24.914 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - ACCEPT from 0 for consensus 3
+23:33:24.914 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 3 ACCEPTs for 3,0
+23:33:24.914 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Deciding consensus 3
+23:33:24.914 [Server CS] DEBUG bftsmart.consensus.Consensus - Delivering decision from consensus 3 to the TOMLayer/DeliveryThread
+23:33:24.914 [Server CS] DEBUG bftsmart.tom.core.DeliveryThread - Using cached requests from the propose.
+23:33:24.914 [Server CS] DEBUG bftsmart.clientsmanagement.ClientsManager - Updating client manager
+23:33:24.914 [Server CS] DEBUG bftsmart.clientsmanagement.ClientsManager - Finished updating client manager
+23:33:24.914 [Server CS] DEBUG bftsmart.tom.core.DeliveryThread - Consensus 3 finished. Decided size=1
+23:33:24.914 [Server CS] DEBUG bftsmart.tom.core.DeliveryThread - Decision from consensus 3 does not contain good reconfiguration
+23:33:24.914 [Server CS] DEBUG bftsmart.tom.core.TOMLayer - Modifying inExec from 3 to -1
+23:33:24.914 [Delivery Thread] DEBUG bftsmart.tom.core.DeliveryThread - Using cached requests from the propose.
+23:33:24.914 [Delivery Thread] DEBUG bftsmart.tom.ServiceReplica - Processing TOMMessage from client 1 with sequence number 3 for session -85882001 decided in consensus 3
+23:33:24.914 [Delivery Thread] DEBUG bftsmart.tom.ServiceReplica - Delivering request from 1 via SingleExecutable
+(4) Counter was incremented. Current value = 40
+23:33:24.915 [Delivery Thread] DEBUG bftsmart.tom.ServiceReplica - sending reply to 1
+23:33:24.916 [Sender for 0] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 1278077257
+23:33:27.931 [nioEventLoopGroup-3-1] DEBUG bftsmart.communication.client.netty.NettyTOMMessageDecoder - Decoded reply from 1 with sequence number 4
+23:33:27.932 [nioEventLoopGroup-3-1] DEBUG bftsmart.tom.core.TOMLayer - Received TOMMessage from client 1 with sequence number 4 for session -85882001
+23:33:27.932 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=PROPOSE, number=4, epoch=0, from=0
+23:33:27.932 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=PROPOSE, number=4, epoch=0, from=0
+23:33:27.933 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus -1 and my last consensus is 3
+23:33:27.933 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 4 can be processed
+23:33:27.933 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 4
+23:33:27.933 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - PROPOSE for consensus 4
+23:33:27.933 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Executing propose for 4,0
+23:33:27.933 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have written value [-77, -93, 74, 90, 124, 12, -39, 72, 40, -94, -117, -86, -37, 103, -60, 51, -70, -74, 31, 88, 120, 122, 37, 118, -7, -67, 124, 52, -74, 55, -80, 33, 116, -35, 109, 119, -121, -45, 81, 20, -41, -80, -94, -38, -107, 71, -36, -17, 81, 123, -100, 40, -115, -85, 98, -41, -36, 124, -71, 47, 95, -8, 15, -51] in consensus instance 4 with timestamp 0
+23:33:27.933 [Server CS] DEBUG bftsmart.tom.core.TOMLayer - Modifying inExec from -1 to 4
+23:33:27.933 [Server CS] DEBUG bftsmart.tom.core.TOMLayer - Checking proposed value
+23:33:27.933 [Server CS] DEBUG bftsmart.tom.core.TOMLayer - Successfully deserialized batch
+23:33:27.933 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Sending WRITE for 4
+23:33:27.933 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - --------sending----------> type=WRITE, number=4, epoch=0, from=3
+23:33:27.933 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - WRITE sent for 4
+23:33:27.933 [Sender for 0] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 1719105821
+23:33:27.934 [Sender for 1] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 1719105821
+23:33:27.934 [Sender for 2] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 1719105821
+23:33:27.933 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 1 WRITEs for 4,0
+23:33:27.934 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - WRITE computed for 4
+23:33:27.938 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=PROPOSE, number=4, epoch=0, from=0
+23:33:27.938 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=PROPOSE, number=4, epoch=0, from=0
+23:33:27.938 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus 4 and my last consensus is 3
+23:33:27.938 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 4 can be processed
+23:33:27.938 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 4
+23:33:27.938 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - PROPOSE for consensus 4
+23:33:27.938 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Executing propose for 4,0
+23:33:27.940 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=WRITE, number=4, epoch=0, from=0
+23:33:27.940 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=WRITE, number=4, epoch=0, from=0
+23:33:27.940 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus 4 and my last consensus is 3
+23:33:27.940 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 4 can be processed
+23:33:27.940 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 4
+23:33:27.940 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - WRITE from 0 for consensus 4
+23:33:27.940 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 2 WRITEs for 4,0
+23:33:27.940 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=WRITE, number=4, epoch=0, from=1
+23:33:27.940 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=WRITE, number=4, epoch=0, from=1
+23:33:27.940 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus 4 and my last consensus is 3
+23:33:27.940 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 4 can be processed
+23:33:27.940 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 4
+23:33:27.941 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - WRITE from 1 for consensus 4
+23:33:27.941 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 3 WRITEs for 4,0
+23:33:27.941 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Sending WRITE for 4
+23:33:27.941 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Setting consensus 4 QuorumWrite tiemstamp to 0 and value [-77, -93, 74, 90, 124, 12, -39, 72, 40, -94, -117, -86, -37, 103, -60, 51, -70, -74, 31, 88, 120, 122, 37, 118, -7, -67, 124, 52, -74, 55, -80, 33, 116, -35, 109, 119, -121, -45, 81, 20, -41, -80, -94, -38, -107, 71, -36, -17, 81, 123, -100, 40, -115, -85, 98, -41, -36, 124, -71, 47, 95, -8, 15, -51]
+23:33:27.941 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Creating cryptographic proof for my ACCEPT message from consensus 4
+23:33:27.941 [Sender for 2] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 404304722
+23:33:27.942 [Sender for 1] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 404304722
+23:33:27.942 [Sender for 0] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 404304722
+23:33:27.943 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 1 ACCEPTs for 4,0
+23:33:27.943 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=WRITE, number=4, epoch=0, from=2
+23:33:27.943 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=WRITE, number=4, epoch=0, from=2
+23:33:27.943 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus 4 and my last consensus is 3
+23:33:27.943 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 4 can be processed
+23:33:27.943 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 4
+23:33:27.943 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - WRITE from 2 for consensus 4
+23:33:27.943 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 4 WRITEs for 4,0
+23:33:27.943 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=ACCEPT, number=4, epoch=0, from=0
+23:33:27.943 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=ACCEPT, number=4, epoch=0, from=0
+23:33:27.943 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus 4 and my last consensus is 3
+23:33:27.943 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 4 can be processed
+23:33:27.943 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 4
+23:33:27.944 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - ACCEPT from 0 for consensus 4
+23:33:27.944 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 2 ACCEPTs for 4,0
+23:33:27.944 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=ACCEPT, number=4, epoch=0, from=2
+23:33:27.944 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=ACCEPT, number=4, epoch=0, from=2
+23:33:27.944 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus 4 and my last consensus is 3
+23:33:27.944 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 4 can be processed
+23:33:27.944 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 4
+23:33:27.944 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - ACCEPT from 2 for consensus 4
+23:33:27.944 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 3 ACCEPTs for 4,0
+23:33:27.944 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Deciding consensus 4
+23:33:27.944 [Server CS] DEBUG bftsmart.consensus.Consensus - Delivering decision from consensus 4 to the TOMLayer/DeliveryThread
+23:33:27.944 [Server CS] DEBUG bftsmart.tom.core.DeliveryThread - Using cached requests from the propose.
+23:33:27.944 [Server CS] DEBUG bftsmart.clientsmanagement.ClientsManager - Updating client manager
+23:33:27.944 [Server CS] DEBUG bftsmart.clientsmanagement.ClientsManager - Finished updating client manager
+23:33:27.944 [Server CS] DEBUG bftsmart.tom.core.DeliveryThread - Consensus 4 finished. Decided size=1
+23:33:27.944 [Server CS] DEBUG bftsmart.tom.core.DeliveryThread - Decision from consensus 4 does not contain good reconfiguration
+23:33:27.944 [Server CS] DEBUG bftsmart.tom.core.TOMLayer - Modifying inExec from 4 to -1
+23:33:27.946 [Delivery Thread] DEBUG bftsmart.tom.core.DeliveryThread - Using cached requests from the propose.
+23:33:27.946 [Delivery Thread] DEBUG bftsmart.tom.ServiceReplica - Processing TOMMessage from client 1 with sequence number 4 for session -85882001 decided in consensus 4
+23:33:27.946 [Delivery Thread] DEBUG bftsmart.tom.ServiceReplica - Delivering request from 1 via SingleExecutable
+(5) Counter was incremented. Current value = 50
+23:33:27.946 [Delivery Thread] DEBUG bftsmart.tom.ServiceReplica - sending reply to 1
+23:33:29.738 [Thread-0] DEBUG bftsmart.communication.server.ServersCommunicationLayer - Server socket timed out, retrying
+23:33:30.952 [nioEventLoopGroup-3-1] DEBUG bftsmart.communication.client.netty.NettyTOMMessageDecoder - Decoded reply from 1 with sequence number 5
+23:33:30.952 [nioEventLoopGroup-3-1] DEBUG bftsmart.tom.core.TOMLayer - Received TOMMessage from client 1 with sequence number 5 for session -85882001
+23:33:30.953 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=PROPOSE, number=5, epoch=1, from=0
+23:33:30.953 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=PROPOSE, number=5, epoch=1, from=0
+23:33:30.953 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus -1 and my last consensus is 4
+23:33:30.953 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 5 can be processed
+23:33:30.953 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 5
+23:33:30.953 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - PROPOSE for consensus 5
+23:33:30.953 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Propose received is not from the expected leader
+23:33:30.953 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=PROPOSE, number=5, epoch=0, from=0
+23:33:30.953 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=PROPOSE, number=5, epoch=0, from=0
+23:33:30.953 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus -1 and my last consensus is 4
+23:33:30.953 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 5 can be processed
+23:33:30.953 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 5
+23:33:30.954 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - PROPOSE for consensus 5
+23:33:30.954 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Executing propose for 5,0
+23:33:30.954 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have written value [-11, 98, 120, 43, -65, 35, 71, 121, -78, 83, -7, -11, 86, -80, 31, -61, -91, -104, -58, -98, -40, -22, 89, -66, 5, 50, 83, 22, -69, -113, 41, -115, 64, 13, -61, 60, -121, -38, -38, 5, 20, 125, -75, -63, -62, 2, -128, -31, -45, 70, 29, -81, 43, -22, 44, -124, 17, 29, 61, 1, 34, -23, -18, 41] in consensus instance 5 with timestamp 0
+23:33:30.954 [Server CS] DEBUG bftsmart.tom.core.TOMLayer - Modifying inExec from -1 to 5
+23:33:30.954 [Server CS] DEBUG bftsmart.tom.core.TOMLayer - Checking proposed value
+23:33:30.954 [Server CS] DEBUG bftsmart.tom.core.TOMLayer - Successfully deserialized batch
+23:33:30.954 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Sending WRITE for 5
+23:33:30.954 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - --------sending----------> type=WRITE, number=5, epoch=0, from=3
+23:33:30.954 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - WRITE sent for 5
+23:33:30.954 [Sender for 0] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 67860837
+23:33:30.954 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 1 WRITEs for 5,0
+23:33:30.954 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - WRITE computed for 5
+23:33:30.954 [Sender for 1] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 67860837
+23:33:30.954 [Sender for 2] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 67860837
+23:33:30.955 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=WRITE, number=5, epoch=0, from=0
+23:33:30.956 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=WRITE, number=5, epoch=0, from=0
+23:33:30.956 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus 5 and my last consensus is 4
+23:33:30.956 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 5 can be processed
+23:33:30.956 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 5
+23:33:30.956 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - WRITE from 0 for consensus 5
+23:33:30.956 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 2 WRITEs for 5,0
+23:33:30.956 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=WRITE, number=5, epoch=0, from=2
+23:33:30.956 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=WRITE, number=5, epoch=0, from=2
+23:33:30.956 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus 5 and my last consensus is 4
+23:33:30.956 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 5 can be processed
+23:33:30.956 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 5
+23:33:30.956 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - WRITE from 2 for consensus 5
+23:33:30.956 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 3 WRITEs for 5,0
+23:33:30.956 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Sending WRITE for 5
+23:33:30.956 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Setting consensus 5 QuorumWrite tiemstamp to 0 and value [-11, 98, 120, 43, -65, 35, 71, 121, -78, 83, -7, -11, 86, -80, 31, -61, -91, -104, -58, -98, -40, -22, 89, -66, 5, 50, 83, 22, -69, -113, 41, -115, 64, 13, -61, 60, -121, -38, -38, 5, 20, 125, -75, -63, -62, 2, -128, -31, -45, 70, 29, -81, 43, -22, 44, -124, 17, 29, 61, 1, 34, -23, -18, 41]
+23:33:30.956 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Creating cryptographic proof for my ACCEPT message from consensus 5
+23:33:30.957 [Sender for 0] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 1779339146
+23:33:30.957 [Sender for 1] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 1779339146
+23:33:30.957 [Sender for 2] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 1779339146
+23:33:30.959 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 1 ACCEPTs for 5,0
+23:33:30.959 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=WRITE, number=5, epoch=0, from=1
+23:33:30.959 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=WRITE, number=5, epoch=0, from=1
+23:33:30.959 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus 5 and my last consensus is 4
+23:33:30.959 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 5 can be processed
+23:33:30.959 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 5
+23:33:30.959 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - WRITE from 1 for consensus 5
+23:33:30.959 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 4 WRITEs for 5,0
+23:33:30.959 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=ACCEPT, number=5, epoch=0, from=2
+23:33:30.959 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=ACCEPT, number=5, epoch=0, from=2
+23:33:30.959 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus 5 and my last consensus is 4
+23:33:30.959 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 5 can be processed
+23:33:30.959 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 5
+23:33:30.959 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - ACCEPT from 2 for consensus 5
+23:33:30.959 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 2 ACCEPTs for 5,0
+23:33:30.959 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=WRITE, number=5, epoch=0, from=0
+23:33:30.959 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=WRITE, number=5, epoch=0, from=0
+23:33:30.959 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus 5 and my last consensus is 4
+23:33:30.959 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 5 can be processed
+23:33:30.959 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 5
+23:33:30.960 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - WRITE from 0 for consensus 5
+23:33:30.960 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 4 WRITEs for 5,0
+23:33:32.957 [Server CS] DEBUG bftsmart.communication.MessageHandler - Received leader change message from myself
+23:33:32.957 [Server CS] INFO bftsmart.tom.leaderchange.RequestsTimer - The following requests timed out: [[1:-85882001:5]]
+23:33:32.957 [Server CS] INFO bftsmart.tom.leaderchange.RequestsTimer - Forwarding requests [1:-85882001:5] to leader
+23:33:32.957 [Server CS] DEBUG bftsmart.tom.core.TOMLayer - Forwarding [1:-85882001:5] to 0
+23:33:32.958 [Sender for 0] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 545379547
+23:33:34.959 [Server CS] DEBUG bftsmart.communication.MessageHandler - Received leader change message from myself
+23:33:34.959 [Server CS] INFO bftsmart.tom.leaderchange.RequestsTimer - The following requests timed out: [[1:-85882001:5]]
+23:33:34.959 [Server CS] INFO bftsmart.tom.leaderchange.RequestsTimer - Attempting to start leader change for requests [[1:-85882001:5]]
+23:33:34.959 [Server CS] DEBUG bftsmart.tom.core.Synchronizer - I need to relay 1 requests
+23:33:34.959 [Server CS] DEBUG bftsmart.tom.util.BatchBuilder - Adding request from client 1 with sequence number 5 for session -85882001 to PROPOSE
+23:33:34.959 [Server CS] INFO bftsmart.tom.core.Synchronizer - Sending STOP message to install regency 1 with 1 request(s) to relay
+23:33:34.960 [Sender for 0] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 2112093767
+23:33:34.960 [Sender for 2] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 2112093767
+23:33:34.960 [Server CS] DEBUG bftsmart.tom.core.Synchronizer - Checking if there are out of context STOPs for regency 1
+23:33:34.960 [Server CS] DEBUG bftsmart.tom.core.Synchronizer - No out of context STOPs for regency 1
+23:33:34.960 [Server CS] INFO bftsmart.communication.MessageHandler - Received leader change message of type STOP for regency 1 from replica 2
+23:33:34.960 [Sender for 1] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 2112093767
+23:33:34.960 [Server CS] INFO bftsmart.tom.core.Synchronizer - Last regency: 0, next regency: 1
+23:33:34.960 [Server CS] DEBUG bftsmart.tom.core.Synchronizer - Received regency change request
+23:33:34.960 [Server CS] DEBUG bftsmart.tom.core.Synchronizer - Checking if there are out of context STOPs for regency 1
+23:33:34.960 [Server CS] DEBUG bftsmart.tom.core.Synchronizer - No out of context STOPs for regency 1
+23:33:34.960 [Server CS] INFO bftsmart.communication.MessageHandler - Received leader change message of type STOP for regency 1 from replica 1
+23:33:34.960 [Server CS] INFO bftsmart.tom.core.Synchronizer - Last regency: 0, next regency: 1
+23:33:34.960 [Server CS] DEBUG bftsmart.tom.core.Synchronizer - Received regency change request
+23:33:34.960 [Server CS] DEBUG bftsmart.tom.core.Synchronizer - Checking if there are out of context STOPs for regency 1
+23:33:34.960 [Server CS] DEBUG bftsmart.tom.core.Synchronizer - No out of context STOPs for regency 1
+23:33:34.960 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Stopping execution manager
+23:33:34.960 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Stopping epoch 0 of consensus 5
+23:33:34.960 [Server CS] DEBUG bftsmart.tom.core.Synchronizer - Installing regency 1
+23:33:34.962 [Server CS] DEBUG bftsmart.tom.core.Synchronizer - Incrementing ets of consensus 5 to 1
+23:33:34.971 [Server CS] INFO bftsmart.tom.core.Synchronizer - Sending STOPDATA of regency 1
+23:33:34.971 [Server CS] DEBUG bftsmart.tom.core.Synchronizer - Checking if there are out of context SYNC for regency 1
+23:33:34.971 [Sender for 1] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 103259269
+23:33:34.971 [Server CS] INFO bftsmart.tom.core.Synchronizer - No out of context SYNC for regency 1
+23:33:34.971 [Server CS] INFO bftsmart.communication.MessageHandler - Received leader change message of type STOP for regency 1 from replica 0
+23:33:34.971 [Server CS] INFO bftsmart.tom.core.Synchronizer - Last regency: 1, next regency: 1
+23:33:34.971 [Server CS] DEBUG bftsmart.tom.core.Synchronizer - Discarding STOP message
+23:33:34.975 [Server CS] INFO bftsmart.communication.MessageHandler - Received leader change message of type SYNC for regency 1 from replica 1
+23:33:34.976 [Server CS] INFO bftsmart.tom.core.Synchronizer - Last regency: 1, next regency: 1
+23:33:34.979 [Server CS] DEBUG bftsmart.tom.leaderchange.LCManager - I collected the context from 3 replicas
+23:33:34.979 [Server CS] DEBUG bftsmart.tom.leaderchange.LCManager - Context for replica 0: CID[6] WRITESET[[]] (VALTS,VAL)[0 :: []]
+23:33:34.979 [Server CS] DEBUG bftsmart.tom.leaderchange.LCManager - Context for replica 1: CID[6] WRITESET[[]] (VALTS,VAL)[0 :: []]
+23:33:34.979 [Server CS] DEBUG bftsmart.tom.leaderchange.LCManager - Context for replica 2: CID[6] WRITESET[[]] (VALTS,VAL)[0 :: []]
+23:33:34.979 [Server CS] DEBUG bftsmart.tom.leaderchange.LCManager - number of timestamps: 1
+23:33:34.979 [Server CS] DEBUG bftsmart.tom.leaderchange.LCManager - number of values: 0
+23:33:34.979 [Server CS] DEBUG bftsmart.tom.leaderchange.LCManager - No timestamp/value pair passed on the BIND predicate
+23:33:34.979 [Server CS] DEBUG bftsmart.tom.leaderchange.LCManager - Predicate UNBOUND is true for N-F replicas
+23:33:34.979 [Server CS] DEBUG bftsmart.tom.leaderchange.LCManager - Predicate SOUND is true for the for context collected from N-F replicas
+23:33:34.980 [Server CS] DEBUG bftsmart.tom.leaderchange.LCManager - Proof made of MAC vector
+23:33:34.980 [Server CS] DEBUG bftsmart.tom.leaderchange.LCManager - Proof made of MAC vector
+23:33:34.980 [Server CS] DEBUG bftsmart.tom.leaderchange.LCManager - Proof made of MAC vector
+23:33:34.980 [Server CS] DEBUG bftsmart.tom.core.Synchronizer - Final stage of LC protocol
+23:33:34.980 [Server CS] INFO bftsmart.tom.core.Synchronizer - Installed proof of last decided consensus 5
+23:33:34.980 [Server CS] DEBUG bftsmart.tom.core.TOMLayer - Checking proposed value
+23:33:34.980 [Server CS] DEBUG bftsmart.tom.core.TOMLayer - Successfully deserialized batch
+23:33:34.980 [Server CS] INFO bftsmart.tom.core.Synchronizer - I'm still at the CID before the most recent one!!! (5)
+23:33:34.980 [Server CS] DEBUG bftsmart.consensus.Consensus - Delivering decision from consensus 5 to the TOMLayer/DeliveryThread
+23:33:34.980 [Server CS] DEBUG bftsmart.tom.core.DeliveryThread - Using cached requests from the propose.
+23:33:34.980 [Server CS] DEBUG bftsmart.clientsmanagement.ClientsManager - Updating client manager
+23:33:34.980 [Server CS] DEBUG bftsmart.clientsmanagement.ClientsManager - Finished updating client manager
+23:33:34.980 [Server CS] DEBUG bftsmart.tom.core.DeliveryThread - Consensus 5 finished. Decided size=1
+23:33:34.980 [Server CS] DEBUG bftsmart.tom.core.DeliveryThread - Decision from consensus 5 does not contain good reconfiguration
+23:33:34.980 [Server CS] DEBUG bftsmart.tom.core.TOMLayer - Modifying inExec from 5 to -1
+23:33:34.980 [Delivery Thread] DEBUG bftsmart.tom.core.DeliveryThread - Using cached requests from the propose.
+23:33:34.980 [Delivery Thread] DEBUG bftsmart.tom.ServiceReplica - Processing TOMMessage from client 1 with sequence number 5 for session -85882001 decided in consensus 5
+23:33:34.980 [Delivery Thread] DEBUG bftsmart.tom.ServiceReplica - Delivering request from 1 via SingleExecutable
+(6) Counter was incremented. Current value = 60
+23:33:34.980 [Delivery Thread] DEBUG bftsmart.tom.ServiceReplica - sending reply to 1
+23:33:34.981 [Server CS] DEBUG bftsmart.tom.core.Synchronizer - Trying to find a binded value
+23:33:34.981 [Server CS] DEBUG bftsmart.tom.core.Synchronizer - Did not found a value that might have already been decided
+23:33:34.981 [Server CS] DEBUG bftsmart.tom.core.Synchronizer - Resuming normal phase
+23:33:34.982 [Server CS] DEBUG bftsmart.tom.core.Synchronizer - Updating consensus' ETS after SYNC (from 0 to 1)
+23:33:34.982 [Server CS] DEBUG bftsmart.tom.core.TOMLayer - Checking proposed value
+23:33:34.982 [Server CS] DEBUG bftsmart.tom.core.TOMLayer - Successfully deserialized batch
+23:33:34.982 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Starting execution manager
+23:33:34.982 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Finished stopped messages processing
+23:33:34.982 [Server CS] DEBUG bftsmart.tom.core.TOMLayer - Modifying inExec from -1 to 6
+23:33:34.982 [Server CS] INFO bftsmart.tom.core.Synchronizer - Sending WRITE message for CID 6, timestamp 1, value [-126, -118, 55, -41, -24, -119, -126, -71, -128, 0, 68, -112, 36, 44, -70, -61, 80, 54, -91, 32, -8, 83, -123, -5, 99, 113, -27, 1, 17, -18, -2, 29, -5, -122, 116, -128, -126, -78, -86, -34, 68, -123, -24, -100, 123, 78, -41, 64, 66, 81, 18, -6, 109, -51, -1, -31, 69, -116, 97, -106, 15, -11, -115, 65]
+23:33:34.982 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - --------sending----------> type=WRITE, number=6, epoch=1, from=3
+23:33:34.982 [Sender for 0] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 586969295
+23:33:34.982 [Sender for 2] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 586969295
+23:33:34.982 [Sender for 1] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 586969295
+23:33:34.982 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=WRITE, number=6, epoch=1, from=1
+23:33:34.982 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=WRITE, number=6, epoch=1, from=1
+23:33:34.982 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus 6 and my last consensus is 5
+23:33:34.982 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 6 can be processed
+23:33:34.982 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 6
+23:33:34.982 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - WRITE from 1 for consensus 6
+23:33:34.982 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 2 WRITEs for 6,1
+23:33:34.982 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=WRITE, number=6, epoch=1, from=0
+23:33:34.982 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=WRITE, number=6, epoch=1, from=0
+23:33:34.982 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus 6 and my last consensus is 5
+23:33:34.982 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 6 can be processed
+23:33:34.982 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 6
+23:33:34.983 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - WRITE from 0 for consensus 6
+23:33:34.983 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 3 WRITEs for 6,1
+23:33:34.983 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Sending WRITE for 6
+23:33:34.983 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Setting consensus 6 QuorumWrite tiemstamp to 1 and value [-126, -118, 55, -41, -24, -119, -126, -71, -128, 0, 68, -112, 36, 44, -70, -61, 80, 54, -91, 32, -8, 83, -123, -5, 99, 113, -27, 1, 17, -18, -2, 29, -5, -122, 116, -128, -126, -78, -86, -34, 68, -123, -24, -100, 123, 78, -41, 64, 66, 81, 18, -6, 109, -51, -1, -31, 69, -116, 97, -106, 15, -11, -115, 65]
+23:33:34.983 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Creating cryptographic proof for my ACCEPT message from consensus 6
+23:33:34.983 [Sender for 0] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 1016125893
+23:33:34.983 [Sender for 1] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 1016125893
+23:33:34.983 [Sender for 2] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 1016125893
+23:33:34.985 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 1 ACCEPTs for 6,1
+23:33:34.985 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=WRITE, number=6, epoch=1, from=2
+23:33:34.985 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=WRITE, number=6, epoch=1, from=2
+23:33:34.985 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus 6 and my last consensus is 5
+23:33:34.985 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 6 can be processed
+23:33:34.985 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 6
+23:33:34.986 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - WRITE from 2 for consensus 6
+23:33:34.986 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 4 WRITEs for 6,1
+23:33:34.986 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=ACCEPT, number=6, epoch=1, from=1
+23:33:34.986 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=ACCEPT, number=6, epoch=1, from=1
+23:33:34.986 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus 6 and my last consensus is 5
+23:33:34.986 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 6 can be processed
+23:33:34.986 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 6
+23:33:34.986 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - ACCEPT from 1 for consensus 6
+23:33:34.986 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 2 ACCEPTs for 6,1
+23:33:34.986 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=ACCEPT, number=6, epoch=1, from=0
+23:33:34.986 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=ACCEPT, number=6, epoch=1, from=0
+23:33:34.986 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus 6 and my last consensus is 5
+23:33:34.986 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 6 can be processed
+23:33:34.986 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 6
+23:33:34.986 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - ACCEPT from 0 for consensus 6
+23:33:34.986 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 3 ACCEPTs for 6,1
+23:33:34.986 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Deciding consensus 6
+23:33:34.986 [Server CS] DEBUG bftsmart.consensus.Consensus - Delivering decision from consensus 6 to the TOMLayer/DeliveryThread
+23:33:34.986 [Server CS] DEBUG bftsmart.tom.core.DeliveryThread - Using cached requests from the propose.
+23:33:34.986 [Server CS] DEBUG bftsmart.clientsmanagement.ClientsManager - Updating client manager
+23:33:34.986 [Server CS] DEBUG bftsmart.clientsmanagement.ClientsManager - Request [1:-85882001:5] does not exist in pending requests
+23:33:34.986 [Server CS] DEBUG bftsmart.clientsmanagement.ClientsManager - Finished updating client manager
+23:33:34.986 [Server CS] DEBUG bftsmart.tom.core.DeliveryThread - Consensus 6 finished. Decided size=1
+23:33:34.986 [Server CS] DEBUG bftsmart.tom.core.DeliveryThread - Decision from consensus 6 does not contain good reconfiguration
+23:33:34.986 [Server CS] DEBUG bftsmart.tom.core.TOMLayer - Modifying inExec from 6 to -1
+23:33:34.986 [Delivery Thread] DEBUG bftsmart.tom.core.DeliveryThread - Using cached requests from the propose.
+23:33:34.987 [Delivery Thread] DEBUG bftsmart.tom.ServiceReplica - Processing TOMMessage from client 1 with sequence number 5 for session -85882001 decided in consensus 6
+23:33:34.987 [Delivery Thread] DEBUG bftsmart.tom.ServiceReplica - Delivering request from 1 via SingleExecutable
+(7) Counter was incremented. Current value = 70
+23:33:34.987 [Delivery Thread] DEBUG bftsmart.tom.ServiceReplica - sending reply to 1
+23:33:34.988 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=ACCEPT, number=6, epoch=1, from=2
+23:33:34.988 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=ACCEPT, number=6, epoch=1, from=2
+23:33:34.988 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus -1 and my last consensus is 6
+23:33:34.988 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Out of context msg with id 6
+23:33:37.990 [nioEventLoopGroup-3-1] DEBUG bftsmart.communication.client.netty.NettyTOMMessageDecoder - Decoded reply from 1 with sequence number 6
+23:33:37.990 [nioEventLoopGroup-3-1] DEBUG bftsmart.tom.core.TOMLayer - Received TOMMessage from client 1 with sequence number 6 for session -85882001
+23:33:37.990 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=PROPOSE, number=7, epoch=0, from=1
+23:33:37.990 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=PROPOSE, number=7, epoch=0, from=1
+23:33:37.990 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus -1 and my last consensus is 6
+23:33:37.990 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 7 can be processed
+23:33:37.990 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 7
+23:33:37.991 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - PROPOSE for consensus 7
+23:33:37.991 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Executing propose for 7,0
+23:33:37.991 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have written value [104, 67, -17, 32, -66, -73, -25, 95, 109, 111, -49, -25, -126, -5, -54, -62, -64, -105, -67, 1, -23, 53, -64, -50, 98, 84, 57, -87, 19, 74, 65, 1, 78, 42, 85, 127, 27, 0, 48, 15, -93, -102, 61, 3, 49, -19, 125, 46, -76, 100, 11, 90, 123, 53, -29, -76, 3, -15, 36, -102, 29, 23, 22, 99] in consensus instance 7 with timestamp 0
+23:33:37.991 [Server CS] DEBUG bftsmart.tom.core.TOMLayer - Modifying inExec from -1 to 7
+23:33:37.991 [Server CS] DEBUG bftsmart.tom.core.TOMLayer - Checking proposed value
+23:33:37.991 [Server CS] DEBUG bftsmart.tom.core.TOMLayer - Successfully deserialized batch
+23:33:37.991 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Sending WRITE for 7
+23:33:37.991 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - --------sending----------> type=WRITE, number=7, epoch=0, from=3
+23:33:37.991 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - WRITE sent for 7
+23:33:37.991 [Sender for 0] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 312079744
+23:33:37.991 [Sender for 2] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 312079744
+23:33:37.991 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 1 WRITEs for 7,0
+23:33:37.991 [Sender for 1] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 312079744
+23:33:37.991 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - WRITE computed for 7
+23:33:37.993 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=WRITE, number=7, epoch=0, from=1
+23:33:37.993 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=WRITE, number=7, epoch=0, from=1
+23:33:37.993 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus 7 and my last consensus is 6
+23:33:37.993 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 7 can be processed
+23:33:37.993 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 7
+23:33:37.993 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - WRITE from 1 for consensus 7
+23:33:37.993 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 2 WRITEs for 7,0
+23:33:37.993 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=WRITE, number=7, epoch=0, from=2
+23:33:37.993 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=WRITE, number=7, epoch=0, from=2
+23:33:37.993 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus 7 and my last consensus is 6
+23:33:37.993 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 7 can be processed
+23:33:37.993 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 7
+23:33:37.993 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - WRITE from 2 for consensus 7
+23:33:37.993 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 3 WRITEs for 7,0
+23:33:37.993 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Sending WRITE for 7
+23:33:37.993 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Setting consensus 7 QuorumWrite tiemstamp to 0 and value [104, 67, -17, 32, -66, -73, -25, 95, 109, 111, -49, -25, -126, -5, -54, -62, -64, -105, -67, 1, -23, 53, -64, -50, 98, 84, 57, -87, 19, 74, 65, 1, 78, 42, 85, 127, 27, 0, 48, 15, -93, -102, 61, 3, 49, -19, 125, 46, -76, 100, 11, 90, 123, 53, -29, -76, 3, -15, 36, -102, 29, 23, 22, 99]
+23:33:37.993 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Creating cryptographic proof for my ACCEPT message from consensus 7
+23:33:37.994 [Sender for 0] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 1886003282
+23:33:37.994 [Sender for 1] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 1886003282
+23:33:37.994 [Sender for 2] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 1886003282
+23:33:37.996 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 1 ACCEPTs for 7,0
+23:33:37.996 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=WRITE, number=7, epoch=0, from=0
+23:33:37.996 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=WRITE, number=7, epoch=0, from=0
+23:33:37.996 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus 7 and my last consensus is 6
+23:33:37.996 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 7 can be processed
+23:33:37.996 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 7
+23:33:37.996 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - WRITE from 0 for consensus 7
+23:33:37.996 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 4 WRITEs for 7,0
+23:33:37.996 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=ACCEPT, number=7, epoch=0, from=2
+23:33:37.996 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=ACCEPT, number=7, epoch=0, from=2
+23:33:37.996 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus 7 and my last consensus is 6
+23:33:37.996 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 7 can be processed
+23:33:37.996 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 7
+23:33:37.997 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - ACCEPT from 2 for consensus 7
+23:33:37.997 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 2 ACCEPTs for 7,0
+23:33:37.997 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=ACCEPT, number=7, epoch=0, from=0
+23:33:37.997 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=ACCEPT, number=7, epoch=0, from=0
+23:33:37.997 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus 7 and my last consensus is 6
+23:33:37.997 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 7 can be processed
+23:33:37.997 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 7
+23:33:37.997 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - ACCEPT from 0 for consensus 7
+23:33:37.997 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 3 ACCEPTs for 7,0
+23:33:37.997 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Deciding consensus 7
+23:33:37.997 [Server CS] DEBUG bftsmart.consensus.Consensus - Delivering decision from consensus 7 to the TOMLayer/DeliveryThread
+23:33:37.997 [Server CS] DEBUG bftsmart.tom.core.DeliveryThread - Using cached requests from the propose.
+23:33:37.997 [Server CS] DEBUG bftsmart.clientsmanagement.ClientsManager - Updating client manager
+23:33:37.997 [Server CS] DEBUG bftsmart.clientsmanagement.ClientsManager - Finished updating client manager
+23:33:37.997 [Server CS] DEBUG bftsmart.tom.core.DeliveryThread - Consensus 7 finished. Decided size=1
+23:33:37.997 [Server CS] DEBUG bftsmart.tom.core.DeliveryThread - Decision from consensus 7 does not contain good reconfiguration
+23:33:37.997 [Server CS] DEBUG bftsmart.tom.core.TOMLayer - Modifying inExec from 7 to -1
+23:33:37.997 [Delivery Thread] DEBUG bftsmart.tom.core.DeliveryThread - Using cached requests from the propose.
+23:33:37.997 [Delivery Thread] DEBUG bftsmart.tom.ServiceReplica - Processing TOMMessage from client 1 with sequence number 6 for session -85882001 decided in consensus 7
+23:33:37.997 [Delivery Thread] DEBUG bftsmart.tom.ServiceReplica - Delivering request from 1 via SingleExecutable
+(8) Counter was incremented. Current value = 80
+23:33:37.997 [Delivery Thread] DEBUG bftsmart.tom.ServiceReplica - sending reply to 1
+23:33:39.747 [Thread-0] DEBUG bftsmart.communication.server.ServersCommunicationLayer - Server socket timed out, retrying
+23:33:41.010 [nioEventLoopGroup-3-1] DEBUG bftsmart.communication.client.netty.NettyTOMMessageDecoder - Decoded reply from 1 with sequence number 7
+23:33:41.010 [nioEventLoopGroup-3-1] DEBUG bftsmart.tom.core.TOMLayer - Received TOMMessage from client 1 with sequence number 7 for session -85882001
+23:33:41.011 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=PROPOSE, number=8, epoch=0, from=1
+23:33:41.011 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=PROPOSE, number=8, epoch=0, from=1
+23:33:41.011 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus -1 and my last consensus is 7
+23:33:41.011 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 8 can be processed
+23:33:41.011 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 8
+23:33:41.011 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - PROPOSE for consensus 8
+23:33:41.011 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Executing propose for 8,0
+23:33:41.011 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have written value [-22, 106, -104, -17, -11, 66, 1, 64, -117, -101, 1, 55, 6, -95, 119, 25, -112, 34, 86, -50, 84, -106, 15, -21, -41, 70, -110, -45, -6, -50, -8, 74, -74, 18, 127, -54, 74, 103, -39, 20, -73, -36, 29, -61, 2, -62, 6, 107, 51, -16, 50, -89, 97, 15, 76, 55, 88, -4, 88, -81, 79, 90, -45, -21] in consensus instance 8 with timestamp 0
+23:33:41.011 [Server CS] DEBUG bftsmart.tom.core.TOMLayer - Modifying inExec from -1 to 8
+23:33:41.011 [Server CS] DEBUG bftsmart.tom.core.TOMLayer - Checking proposed value
+23:33:41.011 [Server CS] DEBUG bftsmart.tom.core.TOMLayer - Successfully deserialized batch
+23:33:41.011 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Sending WRITE for 8
+23:33:41.011 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - --------sending----------> type=WRITE, number=8, epoch=0, from=3
+23:33:41.011 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - WRITE sent for 8
+23:33:41.011 [Sender for 0] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 835800216
+23:33:41.011 [Sender for 2] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 835800216
+23:33:41.011 [Sender for 1] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 835800216
+23:33:41.011 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 1 WRITEs for 8,0
+23:33:41.012 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - WRITE computed for 8
+23:33:41.013 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=WRITE, number=8, epoch=0, from=1
+23:33:41.013 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=WRITE, number=8, epoch=0, from=1
+23:33:41.013 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus 8 and my last consensus is 7
+23:33:41.013 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 8 can be processed
+23:33:41.013 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 8
+23:33:41.013 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - WRITE from 1 for consensus 8
+23:33:41.013 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 2 WRITEs for 8,0
+23:33:41.013 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=WRITE, number=8, epoch=0, from=0
+23:33:41.014 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=WRITE, number=8, epoch=0, from=0
+23:33:41.014 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus 8 and my last consensus is 7
+23:33:41.014 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 8 can be processed
+23:33:41.014 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 8
+23:33:41.014 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - WRITE from 0 for consensus 8
+23:33:41.014 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 3 WRITEs for 8,0
+23:33:41.014 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Sending WRITE for 8
+23:33:41.014 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Setting consensus 8 QuorumWrite tiemstamp to 0 and value [-22, 106, -104, -17, -11, 66, 1, 64, -117, -101, 1, 55, 6, -95, 119, 25, -112, 34, 86, -50, 84, -106, 15, -21, -41, 70, -110, -45, -6, -50, -8, 74, -74, 18, 127, -54, 74, 103, -39, 20, -73, -36, 29, -61, 2, -62, 6, 107, 51, -16, 50, -89, 97, 15, 76, 55, 88, -4, 88, -81, 79, 90, -45, -21]
+23:33:41.014 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Creating cryptographic proof for my ACCEPT message from consensus 8
+23:33:41.014 [Sender for 0] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 188081558
+23:33:41.014 [Sender for 1] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 188081558
+23:33:41.014 [Sender for 2] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 188081558
+23:33:41.015 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 1 ACCEPTs for 8,0
+23:33:41.015 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=WRITE, number=8, epoch=0, from=2
+23:33:41.015 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=WRITE, number=8, epoch=0, from=2
+23:33:41.015 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus 8 and my last consensus is 7
+23:33:41.015 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 8 can be processed
+23:33:41.015 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 8
+23:33:41.016 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - WRITE from 2 for consensus 8
+23:33:41.016 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 4 WRITEs for 8,0
+23:33:41.016 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=ACCEPT, number=8, epoch=0, from=2
+23:33:41.016 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=ACCEPT, number=8, epoch=0, from=2
+23:33:41.016 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus 8 and my last consensus is 7
+23:33:41.016 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 8 can be processed
+23:33:41.016 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 8
+23:33:41.016 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - ACCEPT from 2 for consensus 8
+23:33:41.016 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 2 ACCEPTs for 8,0
+23:33:41.016 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=ACCEPT, number=8, epoch=0, from=0
+23:33:41.016 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=ACCEPT, number=8, epoch=0, from=0
+23:33:41.016 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus 8 and my last consensus is 7
+23:33:41.016 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 8 can be processed
+23:33:41.016 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 8
+23:33:41.016 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - ACCEPT from 0 for consensus 8
+23:33:41.016 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 3 ACCEPTs for 8,0
+23:33:41.016 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Deciding consensus 8
+23:33:41.016 [Server CS] DEBUG bftsmart.consensus.Consensus - Delivering decision from consensus 8 to the TOMLayer/DeliveryThread
+23:33:41.016 [Server CS] DEBUG bftsmart.tom.core.DeliveryThread - Using cached requests from the propose.
+23:33:41.016 [Server CS] DEBUG bftsmart.clientsmanagement.ClientsManager - Updating client manager
+23:33:41.017 [Server CS] DEBUG bftsmart.clientsmanagement.ClientsManager - Finished updating client manager
+23:33:41.017 [Server CS] DEBUG bftsmart.tom.core.DeliveryThread - Consensus 8 finished. Decided size=1
+23:33:41.017 [Server CS] DEBUG bftsmart.tom.core.DeliveryThread - Decision from consensus 8 does not contain good reconfiguration
+23:33:41.017 [Server CS] DEBUG bftsmart.tom.core.TOMLayer - Modifying inExec from 8 to -1
+23:33:41.017 [Delivery Thread] DEBUG bftsmart.tom.core.DeliveryThread - Using cached requests from the propose.
+23:33:41.017 [Delivery Thread] DEBUG bftsmart.tom.ServiceReplica - Processing TOMMessage from client 1 with sequence number 7 for session -85882001 decided in consensus 8
+23:33:41.017 [Delivery Thread] DEBUG bftsmart.tom.ServiceReplica - Delivering request from 1 via SingleExecutable
+(9) Counter was incremented. Current value = 90
+23:33:41.017 [Delivery Thread] DEBUG bftsmart.tom.ServiceReplica - sending reply to 1
+23:33:44.020 [nioEventLoopGroup-3-1] DEBUG bftsmart.communication.client.netty.NettyTOMMessageDecoder - Decoded reply from 1 with sequence number 8
+23:33:44.021 [nioEventLoopGroup-3-1] DEBUG bftsmart.tom.core.TOMLayer - Received TOMMessage from client 1 with sequence number 8 for session -85882001
+23:33:44.021 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=PROPOSE, number=9, epoch=0, from=1
+23:33:44.021 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=PROPOSE, number=9, epoch=0, from=1
+23:33:44.021 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus -1 and my last consensus is 8
+23:33:44.021 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 9 can be processed
+23:33:44.021 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 9
+23:33:44.022 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - PROPOSE for consensus 9
+23:33:44.022 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Executing propose for 9,0
+23:33:44.022 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have written value [110, 22, -48, -52, 10, -88, -37, -58, 48, 124, 61, 123, -45, -76, -61, -70, -112, -54, -76, -108, 30, 34, -32, -97, 114, -96, -7, 54, 116, -22, -93, 48, -70, -109, -38, 47, -88, 51, -23, -46, -28, -92, -106, -20, 49, -117, -112, -116, -44, -72, -100, -35, -118, 95, 41, -32, 80, 79, -90, -29, -93, -13, 53, -87] in consensus instance 9 with timestamp 0
+23:33:44.022 [Server CS] DEBUG bftsmart.tom.core.TOMLayer - Modifying inExec from -1 to 9
+23:33:44.022 [Server CS] DEBUG bftsmart.tom.core.TOMLayer - Checking proposed value
+23:33:44.022 [Server CS] DEBUG bftsmart.tom.core.TOMLayer - Successfully deserialized batch
+23:33:44.022 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Sending WRITE for 9
+23:33:44.022 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - --------sending----------> type=WRITE, number=9, epoch=0, from=3
+23:33:44.022 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - WRITE sent for 9
+23:33:44.022 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 1 WRITEs for 9,0
+23:33:44.022 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - WRITE computed for 9
+23:33:44.022 [Sender for 0] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 1457337477
+23:33:44.022 [Sender for 2] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 1457337477
+23:33:44.022 [Sender for 1] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 1457337477
+23:33:44.023 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=WRITE, number=9, epoch=0, from=1
+23:33:44.023 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=WRITE, number=9, epoch=0, from=1
+23:33:44.023 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus 9 and my last consensus is 8
+23:33:44.023 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 9 can be processed
+23:33:44.023 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 9
+23:33:44.024 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - WRITE from 1 for consensus 9
+23:33:44.024 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 2 WRITEs for 9,0
+23:33:44.024 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=WRITE, number=9, epoch=0, from=2
+23:33:44.024 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=WRITE, number=9, epoch=0, from=2
+23:33:44.024 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus 9 and my last consensus is 8
+23:33:44.024 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 9 can be processed
+23:33:44.024 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 9
+23:33:44.024 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - WRITE from 2 for consensus 9
+23:33:44.024 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 3 WRITEs for 9,0
+23:33:44.024 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Sending WRITE for 9
+23:33:44.024 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Setting consensus 9 QuorumWrite tiemstamp to 0 and value [110, 22, -48, -52, 10, -88, -37, -58, 48, 124, 61, 123, -45, -76, -61, -70, -112, -54, -76, -108, 30, 34, -32, -97, 114, -96, -7, 54, 116, -22, -93, 48, -70, -109, -38, 47, -88, 51, -23, -46, -28, -92, -106, -20, 49, -117, -112, -116, -44, -72, -100, -35, -118, 95, 41, -32, 80, 79, -90, -29, -93, -13, 53, -87]
+23:33:44.024 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Creating cryptographic proof for my ACCEPT message from consensus 9
+23:33:44.024 [Sender for 2] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 1997858492
+23:33:44.024 [Sender for 1] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 1997858492
+23:33:44.024 [Sender for 0] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 1997858492
+23:33:44.025 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 1 ACCEPTs for 9,0
+23:33:44.025 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=WRITE, number=9, epoch=0, from=0
+23:33:44.025 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=WRITE, number=9, epoch=0, from=0
+23:33:44.025 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus 9 and my last consensus is 8
+23:33:44.025 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 9 can be processed
+23:33:44.025 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 9
+23:33:44.026 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - WRITE from 0 for consensus 9
+23:33:44.026 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 4 WRITEs for 9,0
+23:33:44.026 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=ACCEPT, number=9, epoch=0, from=2
+23:33:44.026 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=ACCEPT, number=9, epoch=0, from=2
+23:33:44.026 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus 9 and my last consensus is 8
+23:33:44.026 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 9 can be processed
+23:33:44.026 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 9
+23:33:44.026 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - ACCEPT from 2 for consensus 9
+23:33:44.026 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 2 ACCEPTs for 9,0
+23:33:44.026 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=ACCEPT, number=9, epoch=0, from=0
+23:33:44.026 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=ACCEPT, number=9, epoch=0, from=0
+23:33:44.026 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus 9 and my last consensus is 8
+23:33:44.026 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 9 can be processed
+23:33:44.026 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 9
+23:33:44.026 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - ACCEPT from 0 for consensus 9
+23:33:44.026 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 3 ACCEPTs for 9,0
+23:33:44.026 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Deciding consensus 9
+23:33:44.026 [Server CS] DEBUG bftsmart.consensus.Consensus - Delivering decision from consensus 9 to the TOMLayer/DeliveryThread
+23:33:44.026 [Server CS] DEBUG bftsmart.tom.core.DeliveryThread - Using cached requests from the propose.
+23:33:44.026 [Server CS] DEBUG bftsmart.clientsmanagement.ClientsManager - Updating client manager
+23:33:44.026 [Server CS] DEBUG bftsmart.clientsmanagement.ClientsManager - Finished updating client manager
+23:33:44.026 [Server CS] DEBUG bftsmart.tom.core.DeliveryThread - Consensus 9 finished. Decided size=1
+23:33:44.026 [Server CS] DEBUG bftsmart.tom.core.DeliveryThread - Decision from consensus 9 does not contain good reconfiguration
+23:33:44.027 [Server CS] DEBUG bftsmart.tom.core.TOMLayer - Modifying inExec from 9 to -1
+23:33:44.027 [Delivery Thread] DEBUG bftsmart.tom.core.DeliveryThread - Using cached requests from the propose.
+23:33:44.027 [Delivery Thread] DEBUG bftsmart.tom.ServiceReplica - Processing TOMMessage from client 1 with sequence number 8 for session -85882001 decided in consensus 9
+23:33:44.027 [Delivery Thread] DEBUG bftsmart.tom.ServiceReplica - Delivering request from 1 via SingleExecutable
+(10) Counter was incremented. Current value = 100
+23:33:44.027 [Delivery Thread] DEBUG bftsmart.tom.ServiceReplica - sending reply to 1
+23:33:47.029 [nioEventLoopGroup-3-1] DEBUG bftsmart.communication.client.netty.NettyTOMMessageDecoder - Decoded reply from 1 with sequence number 9
+23:33:47.029 [nioEventLoopGroup-3-1] DEBUG bftsmart.tom.core.TOMLayer - Received TOMMessage from client 1 with sequence number 9 for session -85882001
+23:33:47.029 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=PROPOSE, number=10, epoch=0, from=1
+23:33:47.029 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=PROPOSE, number=10, epoch=0, from=1
+23:33:47.029 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus -1 and my last consensus is 9
+23:33:47.029 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 10 can be processed
+23:33:47.029 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 10
+23:33:47.030 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - PROPOSE for consensus 10
+23:33:47.030 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Executing propose for 10,0
+23:33:47.030 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have written value [81, 64, -8, -56, -103, -66, 92, -59, 22, -60, 93, 61, 9, 27, 36, -108, 51, -76, -13, -44, -18, 85, -102, 20, -76, -13, 125, 111, 54, -51, 17, -15, 15, -59, -104, -57, 107, 69, -118, 92, 10, -90, 1, -96, -18, 75, 31, -53, -6, -3, 47, 23, -117, -83, -37, -63, 67, -50, 82, 36, 75, -67, -15, -108] in consensus instance 10 with timestamp 0
+23:33:47.030 [Server CS] DEBUG bftsmart.tom.core.TOMLayer - Modifying inExec from -1 to 10
+23:33:47.030 [Server CS] DEBUG bftsmart.tom.core.TOMLayer - Checking proposed value
+23:33:47.030 [Server CS] DEBUG bftsmart.tom.core.TOMLayer - Successfully deserialized batch
+23:33:47.030 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Sending WRITE for 10
+23:33:47.030 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - --------sending----------> type=WRITE, number=10, epoch=0, from=3
+23:33:47.030 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - WRITE sent for 10
+23:33:47.030 [Sender for 1] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 1276821834
+23:33:47.030 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 1 WRITEs for 10,0
+23:33:47.030 [Sender for 0] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 1276821834
+23:33:47.030 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - WRITE computed for 10
+23:33:47.030 [Sender for 2] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 1276821834
+23:33:47.031 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=WRITE, number=10, epoch=0, from=1
+23:33:47.031 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=WRITE, number=10, epoch=0, from=1
+23:33:47.031 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus 10 and my last consensus is 9
+23:33:47.031 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 10 can be processed
+23:33:47.031 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 10
+23:33:47.032 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - WRITE from 1 for consensus 10
+23:33:47.032 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 2 WRITEs for 10,0
+23:33:47.032 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=WRITE, number=10, epoch=0, from=2
+23:33:47.032 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=WRITE, number=10, epoch=0, from=2
+23:33:47.032 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus 10 and my last consensus is 9
+23:33:47.032 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 10 can be processed
+23:33:47.032 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 10
+23:33:47.032 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - WRITE from 2 for consensus 10
+23:33:47.032 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 3 WRITEs for 10,0
+23:33:47.032 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Sending WRITE for 10
+23:33:47.032 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Setting consensus 10 QuorumWrite tiemstamp to 0 and value [81, 64, -8, -56, -103, -66, 92, -59, 22, -60, 93, 61, 9, 27, 36, -108, 51, -76, -13, -44, -18, 85, -102, 20, -76, -13, 125, 111, 54, -51, 17, -15, 15, -59, -104, -57, 107, 69, -118, 92, 10, -90, 1, -96, -18, 75, 31, -53, -6, -3, 47, 23, -117, -83, -37, -63, 67, -50, 82, 36, 75, -67, -15, -108]
+23:33:47.032 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Creating cryptographic proof for my ACCEPT message from consensus 10
+23:33:47.032 [Sender for 0] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 1747420170
+23:33:47.032 [Sender for 2] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 1747420170
+23:33:47.032 [Sender for 1] DEBUG bftsmart.communication.server.ServerConnection - Sending MAC for data 1747420170
+23:33:47.034 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 1 ACCEPTs for 10,0
+23:33:47.034 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=WRITE, number=10, epoch=0, from=0
+23:33:47.034 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=WRITE, number=10, epoch=0, from=0
+23:33:47.034 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus 10 and my last consensus is 9
+23:33:47.034 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 10 can be processed
+23:33:47.034 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 10
+23:33:47.034 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - WRITE from 0 for consensus 10
+23:33:47.034 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 4 WRITEs for 10,0
+23:33:47.034 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=ACCEPT, number=10, epoch=0, from=0
+23:33:47.034 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=ACCEPT, number=10, epoch=0, from=0
+23:33:47.034 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus 10 and my last consensus is 9
+23:33:47.034 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 10 can be processed
+23:33:47.034 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 10
+23:33:47.034 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - ACCEPT from 0 for consensus 10
+23:33:47.034 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 2 ACCEPTs for 10,0
+23:33:47.034 [Server CS] DEBUG bftsmart.communication.ServerCommunicationSystem - <-------receiving---------- type=ACCEPT, number=10, epoch=0, from=2
+23:33:47.034 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Received message  type=ACCEPT, number=10, epoch=0, from=2
+23:33:47.034 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - I'm at consensus 10 and my last consensus is 9
+23:33:47.034 [Server CS] DEBUG bftsmart.tom.core.ExecutionManager - Message for consensus 10 can be processed
+23:33:47.034 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Processing paxos msg with id 10
+23:33:47.035 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - ACCEPT from 2 for consensus 10
+23:33:47.035 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - I have 3 ACCEPTs for 10,0
+23:33:47.035 [Server CS] DEBUG bftsmart.consensus.roles.Acceptor - Deciding consensus 10
+23:33:47.035 [Server CS] DEBUG bftsmart.consensus.Consensus - Delivering decision from consensus 10 to the TOMLayer/DeliveryThread
+23:33:47.035 [Server CS] DEBUG bftsmart.tom.core.DeliveryThread - Using cached requests from the propose.
+23:33:47.035 [Server CS] DEBUG bftsmart.clientsmanagement.ClientsManager - Updating client manager
+23:33:47.035 [Server CS] DEBUG bftsmart.clientsmanagement.ClientsManager - Finished updating client manager
+23:33:47.035 [Server CS] DEBUG bftsmart.tom.core.DeliveryThread - Consensus 10 finished. Decided size=1
+23:33:47.035 [Server CS] DEBUG bftsmart.tom.core.DeliveryThread - Decision from consensus 10 does not contain good reconfiguration
+23:33:47.035 [Server CS] DEBUG bftsmart.tom.core.TOMLayer - Modifying inExec from 10 to -1
+23:33:47.035 [Delivery Thread] DEBUG bftsmart.tom.core.DeliveryThread - Using cached requests from the propose.
+23:33:47.035 [Delivery Thread] DEBUG bftsmart.tom.ServiceReplica - Processing TOMMessage from client 1 with sequence number 9 for session -85882001 decided in consensus 10
+23:33:47.035 [Delivery Thread] DEBUG bftsmart.tom.ServiceReplica - Delivering request from 1 via SingleExecutable
+(11) Counter was incremented. Current value = 110
+23:33:47.035 [Delivery Thread] DEBUG bftsmart.tom.ServiceReplica - sending reply to 1
+23:33:49.759 [Thread-0] DEBUG bftsmart.communication.server.ServersCommunicationLayer - Server socket timed out, retrying
+23:33:59.769 [Thread-0] DEBUG bftsmart.communication.server.ServersCommunicationLayer - Server socket timed out, retrying
+23:34:09.772 [Thread-0] DEBUG bftsmart.communication.server.ServersCommunicationLayer - Server socket timed out, retrying
+23:34:19.778 [Thread-0] DEBUG bftsmart.communication.server.ServersCommunicationLayer - Server socket timed out, retrying
+23:34:29.792 [Thread-0] DEBUG bftsmart.communication.server.ServersCommunicationLayer - Server socket timed out, retrying
+23:34:32.603 [Thread-2] INFO bftsmart.tom.util.ShutdownHookThread - 
+---------- DEBUG INFO ----------
+
+Current time: 23:34:32.602
+Current leader: 1
+Current regency: 1
+
+Last finished consensus: 10
+
+	 -- Consensus state: 
+
+		ETS=0 
+		WriteSet=[[0 :: UUD4yJm+XMUWxF09CRsklDO089TuVZoUtPN9bzbNEfEPxZjHa0WKXAqmAaDuSx/L+v0vF4ut28FDzlIkS73xlA==]] 
+		(VAL,TS)=[0 :: UUD4yJm+XMUWxF09CRsklDO089TuVZoUtPN9bzbNEfEPxZjHa0WKXAqmAaDuSx/L+v0vF4ut28FDzlIkS73xlA==]
+
+	 -- Epoch state: 
+
+		CID=10 
+		TS=0 
+		Propose=[UUD4yJm+XMUWxF09CRsklDO089TuVZoUtPN9bzbNEfEPxZjHa0WKXAqmAaDuSx/L+v0vF4ut28FDzlIkS73xlA==] 
+		Writes=([UUD4yJm+XMUWxF09CRsklDO089TuVZoUtPN9bzbNEfEPxZjHa0WKXAqmAaDuSx/L+v0vF4ut28FDzlIkS73xlA==], [UUD4yJm+XMUWxF09CRsklDO089TuVZoUtPN9bzbNEfEPxZjHa0WKXAqmAaDuSx/L+v0vF4ut28FDzlIkS73xlA==], [UUD4yJm+XMUWxF09CRsklDO089TuVZoUtPN9bzbNEfEPxZjHa0WKXAqmAaDuSx/L+v0vF4ut28FDzlIkS73xlA==], [UUD4yJm+XMUWxF09CRsklDO089TuVZoUtPN9bzbNEfEPxZjHa0WKXAqmAaDuSx/L+v0vF4ut28FDzlIkS73xlA==]) 
+		Accepts=([UUD4yJm+XMUWxF09CRsklDO089TuVZoUtPN9bzbNEfEPxZjHa0WKXAqmAaDuSx/L+v0vF4ut28FDzlIkS73xlA==], [null], [UUD4yJm+XMUWxF09CRsklDO089TuVZoUtPN9bzbNEfEPxZjHa0WKXAqmAaDuSx/L+v0vF4ut28FDzlIkS73xlA==], [UUD4yJm+XMUWxF09CRsklDO089TuVZoUtPN9bzbNEfEPxZjHa0WKXAqmAaDuSx/L+v0vF4ut28FDzlIkS73xlA==])
+
+Consensus in execution: None
+
+---------- ---------- ----------
+
+
+Process finished with exit code 130

@@ -16,8 +16,6 @@ public class MessageDropper {
     static String dropOutputFilePath;
     static String stateFilePath;
 
-    static int nodeNum;
-
     static String path = "Z:\\hk\\bft-testing\\FUZZ-BFT-SMaRt\\src\\resource\\";
 
     static {
@@ -32,15 +30,13 @@ public class MessageDropper {
         scenarioFilePath = properties.getProperty("scenario-file-path"); //read from config
         dropOutputFilePath = properties.getProperty("drop-output-file");
         stateFilePath = properties.getProperty("state-file");
-        nodeNum = Integer.parseInt(properties.getProperty("nodeNum"));
     }
 
-    public static void addProposeMsgCount() throws IOException {
+    public static void initFile() throws IOException {
         //propose file +4
-        initFile("propose");
-        initFile("write");
-        initFile("accept");
-        readAndAdd("propose", nodeNum);
+//        initFile("propose");
+//        initFile("write");
+//        initFile("accept");
     }
 
     private static void initFile(String roundType) throws IOException {
@@ -77,33 +73,16 @@ public class MessageDropper {
         }
     }
 
-    public static void minusProposeMsgCount() throws IOException {
-        readAndAdd("propose",  -1);
-    }
-
-    public static void addWriteMsgCount() throws IOException {
-        readAndAdd("write", nodeNum - 1);
-    }
-
-    public static void minusWriteMsgCount() throws IOException {
-        //-1
-        readAndAdd("write",  -1);
-    }
-
-    public static void addAcceptMsgCount() throws IOException {
-        //readAndAdd("accept", nodeNum - 1);
-    }
-
-    public static void minusAcceptMsgCount() throws IOException {
-        //readAndAdd("accept",  -1);
-    }
-
-    public static boolean existWaitingMessage(String type) throws IOException {
-        if (onlyRead(type) == 0) {
-            System.out.println("type: " + type + " messages clear!");
-            return false;
-        }
-        else return true;
+    public static boolean arriveToRound(String type) throws IOException {
+//        if (onlyRead(type) == onlyRead(type+"1")) {
+//            System.out.println("type: " + type + " messages clear!");
+//            return false;
+//        }
+//        else {
+//            System.out.println("type: " + type + " messages exist!");
+//            return true;
+//        }
+        return false;
     }
 
     public static int onlyRead(String roundType) throws IOException {
@@ -216,7 +195,8 @@ public class MessageDropper {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        String current = msg.getEpoch() + " " + msg.getType() + " " + msg.getSender() + " " + receiver;
+        String current = msg.getEpoch() + " " + (msg.getType() - 44781) + " " + msg.getSender() + " " + receiver;
+        // String current = (msg.getType() - 44781) + " " + msg.getSender() + " " + receiver;
         for (String line : lines) {
             if (line.equals(current)) {
                 System.out.println("Drop message: " + msg + ", to=" + receiver);
@@ -235,6 +215,7 @@ public class MessageDropper {
                 return true;
             }
         }
+
         return false;
     }
 }

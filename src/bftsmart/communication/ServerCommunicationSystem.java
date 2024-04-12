@@ -123,7 +123,9 @@ public class ServerCommunicationSystem extends Thread {
                 SystemMessage sm = inQueue.poll(MESSAGE_WAIT_TIME, TimeUnit.MILLISECONDS);
 
                 if (sm != null) {
-                    logger.debug("<-------receiving---------- " + sm);
+                    if (sm instanceof ConsensusMessage) {
+                        logger.debug("<-------receiving---------- " + sm);
+                    }
                     messageHandler.processData(sm);
                     count++;
                 } else {                
@@ -147,20 +149,12 @@ public class ServerCommunicationSystem extends Thread {
      * @param sm the message to be sent
      */
     public void send(int[] targets, SystemMessage sm) {
-        if (sm instanceof ConsensusMessage) {
-            if (((ConsensusMessage) sm).getPaxosVerboseType().equals("WRITE")) {
-                try {
-                    MessageDropper.addWriteMsgCount();
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
-                }
-            }
-        }
-
         if (sm instanceof TOMMessage) {
             clientsConn.send(targets, (TOMMessage) sm, false);
         } else {
-            logger.debug("--------sending----------> " + sm);
+            if (sm instanceof ConsensusMessage) {
+                logger.debug("--------sending----------> " + sm);
+            }
             serversConn.send(targets, sm, true);
         }
     }

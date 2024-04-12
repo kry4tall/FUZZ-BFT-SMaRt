@@ -60,18 +60,20 @@ public class Proposer {
         ConsensusMessage cm = factory.createPropose(cid, 0, value);
 
         int me = controller.getStaticConf().getProcessId();
-
+        System.out.println("Proposer is Node " + me);
         if(MessageCorrupter.isByzantineNode(me))
         {
-            System.out.println("Proposer is Node " + me);
-            cm = MessageCorrupter.corruptMessage(cm);
+            // cm = MessageCorrupter.corruptMessage(cm);
+             ConsensusMessage newCm = MessageCorrupter.corruptMessage(cm);
+             //twins
+             communication.send(this.controller.getCurrentViewAcceptors(), newCm);
         }
 
-        try {
-            MessageDropper.addProposeMsgCount();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+//        try {
+//            MessageDropper.addProposeMsgCount();
+//        } catch (IOException e) {
+//            throw new RuntimeException(e);
+//        }
         communication.send(this.controller.getCurrentViewAcceptors(),
                 cm);
 
